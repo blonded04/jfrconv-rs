@@ -1,0 +1,49 @@
+{
+  "status": "Browser runtime observation of HTML byte-identical to the final0.2.1 generated APheatmap pair",
+  "provenance": "Parent /root reported direct IAB DOM reads of both test-only debug pages; values transcribed from its verification message. This is distinct from the raw-file Node decoder and VM timeline execution.",
+  "pages": [
+    "http://127.0.0.1:8841/ap-heatmap/java.debug.html",
+    "http://127.0.0.1:8841/ap-heatmap/rust.debug.html"
+  ],
+  "both_pages": {
+    "startMs": 1794322293577,
+    "zoom": 0,
+    "startBlock": 678,
+    "rows": 50,
+    "scale": 1,
+    "cumulative_counts_length": 101,
+    "all_counts_min_max_equal": true,
+    "devicePixelRatio": 2,
+    "sq": 10,
+    "sqPx": 5,
+    "sqScale": 2,
+    "canvasScrollPadding": 200,
+    "heatCanvas_width": 3220,
+    "heatCanvas_height": 522,
+    "heatCanvas_CSS_left": -167,
+    "heatCanvas_CSS_width": 1610,
+    "heatCanvas_transform_translation_x": -200,
+    "timelineDrawCallCount": 1076,
+    "timelineDrawFNV1a": "18cce62a",
+    "firstColoredFillRect": [
+      "fillRect",
+      "#ffe2cf",
+      530,
+      302,
+      10,
+      10
+    ]
+  },
+  "screenshot_observation": "The apparent orange-band position swapped between original and debug copies although both runtime data and canvas calls were identical. No production codec/UI change was made in response. A screenshot/compositor artifact is the working inference; runtime parity is the direct evidence.",
+  "raw_timeline_report": "heatmap-header-report.json",
+  "capture_instrumentation": "debug_copies.py",
+  "current_candidate_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "input_html_sha256": {
+    "java": "07b2a24f243dee16d03f90e8bd452c1a6cf560fe61d0645b42399fbb78fdcae6",
+    "rust": "979c20914bcb50d691ce87e88b07efd61b07fae022a0fbd79162d1301ea6dc16"
+  },
+  "byte_identity_with_current_html": {
+    "java": true,
+    "rust": true
+  }
+}

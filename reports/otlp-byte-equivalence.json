@@ -1,0 +1,157 @@
+{
+  "old_binary_sha256": "a2ed10e46706fe85808dbb7092331c17cbe5dc0442cc2a359feb2157e338f723",
+  "new_binary_sha256": "633c9e36789cca0b96baea955099db941a9b24d72062c865746d081e5fae700a",
+  "comparison": "Byte-for-byte OTLP protobuf equality; diagnostic wall times are not controlled final benchmarks.",
+  "cases": [
+    {
+      "name": "diverse",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/2000000-high-cardinality.jfr",
+      "flags": [
+        "--cpu",
+        "--lines"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "6d66683f7a6db3f141ac3f56504e7035741fb4abd531b0c0df80cc6b4a0a43ac",
+          "bytes": 6435393,
+          "diagnostic_seconds": 0.46679950001998805
+        },
+        "new": {
+          "sha256": "6d66683f7a6db3f141ac3f56504e7035741fb4abd531b0c0df80cc6b4a0a43ac",
+          "bytes": 6435393,
+          "diagnostic_seconds": 0.41670262499246746
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "repeat",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/2000000-samples.jfr",
+      "flags": [
+        "--cpu"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "4c353caa938d645ba1778042119fc7ff40644d037ac0188a75d77f00561afc95",
+          "bytes": 980,
+          "diagnostic_seconds": 0.12974870897596702
+        },
+        "new": {
+          "sha256": "4c353caa938d645ba1778042119fc7ff40644d037ac0188a75d77f00561afc95",
+          "bytes": 980,
+          "diagnostic_seconds": 0.03140099998563528
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "ap-cpu",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+      "flags": [
+        "--cpu"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "a6082773b41b4b5530db7bfac443e960af106d3735220a9ae217f1b943097113",
+          "bytes": 49171,
+          "diagnostic_seconds": 0.008132041984936222
+        },
+        "new": {
+          "sha256": "a6082773b41b4b5530db7bfac443e960af106d3735220a9ae217f1b943097113",
+          "bytes": 49171,
+          "diagnostic_seconds": 0.006119041994679719
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "ap-alloc",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+      "flags": [
+        "--alloc",
+        "--total",
+        "--threads",
+        "--classify"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "61a69f20b37d9dd95fb290746e5e28470d6e1b8019c34f70bbce5eab5a437d9f",
+          "bytes": 7082,
+          "diagnostic_seconds": 0.006227040983503684
+        },
+        "new": {
+          "sha256": "61a69f20b37d9dd95fb290746e5e28470d6e1b8019c34f70bbce5eab5a437d9f",
+          "bytes": 7082,
+          "diagnostic_seconds": 0.006023499998264015
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "mixed-lock",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/mixed.jfr",
+      "flags": [
+        "--lock",
+        "--total",
+        "--threads",
+        "--classify"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "f12811ba1b9be6c9e873b97d998c5988715ec3faa5ad98db2a01ad4213b40ddb",
+          "bytes": 598,
+          "diagnostic_seconds": 0.004358167003374547
+        },
+        "new": {
+          "sha256": "f12811ba1b9be6c9e873b97d998c5988715ec3faa5ad98db2a01ad4213b40ddb",
+          "bytes": 598,
+          "diagnostic_seconds": 0.004348749993368983
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "mixed-native",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/mixed.jfr",
+      "flags": [
+        "--nativemem",
+        "--total",
+        "--threads"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "7ea190e9cf0446656a15a068c5d57f2f8ca976d7740607326b13fb92d094786e",
+          "bytes": 495,
+          "diagnostic_seconds": 0.003944457974284887
+        },
+        "new": {
+          "sha256": "7ea190e9cf0446656a15a068c5d57f2f8ca976d7740607326b13fb92d094786e",
+          "bytes": 495,
+          "diagnostic_seconds": 0.0038771670078858733
+        }
+      },
+      "byte_identical": true
+    },
+    {
+      "name": "mixed-trace",
+      "source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/mixed.jfr",
+      "flags": [
+        "--trace",
+        "--total"
+      ],
+      "runs": {
+        "old": {
+          "sha256": "0e0f43704d714826ff18b0f167b0bb890b212800f0fc86af86c9d286f26225f2",
+          "bytes": 495,
+          "diagnostic_seconds": 0.003900917014107108
+        },
+        "new": {
+          "sha256": "0e0f43704d714826ff18b0f167b0bb890b212800f0fc86af86c9d286f26225f2",
+          "bytes": 495,
+          "diagnostic_seconds": 0.0041952500178013
+        }
+      },
+      "byte_identical": true
+    }
+  ]
+}

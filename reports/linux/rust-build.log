@@ -1,0 +1,47 @@
+mkdir -p build/bin
+mkdir -p build/lib
+for f in src/*.cpp; do echo '#include "'$f'"'; done |\
+g++  -O3 -fno-exceptions -fno-omit-frame-pointer -fvisibility=hidden -std=c++11  -U_FORTIFY_SOURCE -Wl,-z,defs -Wl,--exclude-libs,ALL -static-libstdc++ -static-libgcc -fdata-sections -ffunction-sections -Wl,--gc-sections -ggdb -fwhole-program -momit-leaf-frame-pointer -DPROFILER_VERSION=\"4.1\" -I/opt/java/openjdk/include -Isrc/helper -I/opt/java/openjdk/include/linux -fPIC -shared -o build/lib/libasyncProfiler.so -xc++ - -ldl -lpthread -lrt
+cc  -O3 -fno-exceptions  -DPROFILER_VERSION=\"4.1\" -o build/bin/asprof src/main/*.cpp src/jattach/*.c
+strip build/bin/asprof
+mkdir -p build/jar
+mkdir -p build/api
+/opt/java/openjdk/bin/javac --release 8 -Xlint:-options -d build/api src/api/one/profiler/AsyncProfiler.java src/api/one/profiler/AsyncProfilerMXBean.java src/api/one/profiler/Counter.java src/api/one/profiler/Events.java
+/opt/java/openjdk/bin/jar cf build/jar/async-profiler.jar -C build/api .
+rm -f -r build/api
+mkdir -p build/converter
+/opt/java/openjdk/bin/javac --release 8 -Xlint:-options -d build/converter src/converter/one/proto/Proto.java src/converter/one/jfr/Element.java src/converter/one/jfr/JfrReader.java src/converter/one/jfr/JfrClass.java src/converter/one/jfr/DictionaryInt.java src/converter/one/jfr/JfrField.java src/converter/one/jfr/ClassRef.java src/converter/one/jfr/Dictionary.java src/converter/one/jfr/MethodRef.java src/converter/one/jfr/StackTrace.java src/converter/one/jfr/event/AllocationSample.java src/converter/one/jfr/event/LiveObject.java src/converter/one/jfr/event/GCHeapSummary.java src/converter/one/jfr/event/MallocEvent.java src/converter/one/jfr/event/ExecutionSample.java src/converter/one/jfr/event/EventCollector.java src/converter/one/jfr/event/Event.java src/converter/one/jfr/event/EventAggregator.java src/converter/one/jfr/event/ObjectCount.java src/converter/one/jfr/event/MallocLeakAggregator.java src/converter/one/jfr/event/ContendedLock.java src/converter/one/jfr/event/CPULoad.java src/converter/one/heatmap/HuffmanEncoder.java src/converter/one/heatmap/SynonymTable.java src/converter/one/heatmap/SampleList.java src/converter/one/heatmap/Method.java src/converter/one/heatmap/MethodCache.java src/converter/one/heatmap/LzNodeTree.java src/converter/one/heatmap/Heatmap.java src/converter/one/heatmap/StackStorage.java src/converter/one/heatmap/HtmlOut.java src/converter/one/convert/ResourceProcessor.java src/converter/one/convert/Index.java src/converter/one/convert/CallStack.java src/converter/one/convert/Frame.java src/converter/one/convert/OtlpConstants.java src/converter/one/convert/FlameGraph.java src/converter/one/convert/JfrToPprof.java src/converter/one/convert/JfrToOtlp.java src/converter/one/convert/RustBridge.java src/converter/one/convert/JfrToHeatmap.java src/converter/one/convert/JfrConverter.java src/converter/one/convert/JfrToFlame.java src/converter/one/convert/Arguments.java src/converter/one/convert/Classifier.java src/converter/Main.java
+/opt/java/openjdk/bin/jar cfe build/jar/jfr-converter.jar Main -C build/converter . -C src/res .
+rm -f -r build/converter
+mkdir -p build/include
+cp -f src/asprof.h build/include
+mkdir -p test/deps
+cc -shared -fPIC -o build/test/lib/libreladyn.so test/native/libs/reladyn.c
+cc -shared -fPIC -o build/test/lib/libcallsmalloc.so test/native/libs/callsmalloc.c
+cc -shared -fPIC -I/opt/java/openjdk/include -Isrc/helper -I/opt/java/openjdk/include/linux -Isrc -o build/test/lib/libjnimalloc.so test/native/libs/jnimalloc.c
+cc -shared -fPIC -o build/test/lib/libmalloc.so test/native/libs/malloc.c
+cc -fno-optimize-sibling-calls -shared -fPIC -I/opt/java/openjdk/include -Isrc/helper -I/opt/java/openjdk/include/linux -Isrc -o build/test/lib/libjninativestacks.so test/native/libs/jninativestacks.c
+cc -c -shared -fPIC -o build/test/lib/vaddrdif.o test/native/libs/vaddrdif.c
+ld -N -shared -o build/test/lib/libvaddrdif.so build/test/lib/vaddrdif.o -T test/native/libs/vaddrdif.ld
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: build/test/lib/libvaddrdif.so has a LOAD segment with RWX permissions
+as -o build/test/lib/multiplematching.o test/native/libs/multiplematching.s
+ld -shared -o build/test/lib/multiplematching.so build/test/lib/multiplematching.o
+as -o build/test/lib/twiceatzero.o test/native/libs/twiceatzero.s
+ld -shared -o build/test/lib/libtwiceatzero.so build/test/lib/twiceatzero.o --section-start=.seg1=0x4000 -z max-page-size=0x1000
+cc -o build/test/bin/malloc_plt_dyn test/test/nativemem/malloc_plt_dyn.c
+cc -o build/test/bin/native_api -Isrc test/test/c/native_api.c -ldl
+cc -o build/test/bin/profile_with_dlopen -Isrc test/test/nativemem/profile_with_dlopen.c -ldl
+cc -o build/test/bin/preload_malloc -Isrc test/test/nativemem/preload_malloc.c -ldl
+cc -o build/test/bin/nativemem_known_lib_crash -Isrc test/test/nativemem/nativemem_known_lib_crash.c -ldl
+g++ -o build/test/bin/non_java_app -std=c++11 -I/opt/java/openjdk/include -Isrc/helper -I/opt/java/openjdk/include/linux -Isrc -Itest/native test/test/nonjava/non_java_app.cpp -ldl -lpthread -lrt
+sed -e 's/PROFILER_VERSION/4.1/g' -e 's/BUILD_DATE/Nov 10 2026/g' src/launcher/launcher.sh > build/bin/jfrconv
+chmod +x build/bin/jfrconv
+cat build/jar/jfr-converter.jar >> build/bin/jfrconv
+rm -rf build/test/classes
+mkdir -p build/test/classes
+/opt/java/openjdk/bin/javac -source 8 -target 8 -Xlint:-options -XDignore.symbol.file \
+	 -implicit:none \
+	 -cp "build/jar/*:test/deps/*:test/gen/*:test/stubs" \
+	 -d build/test/classes \
+	 test/test/smoke/Cpu.java test/test/smoke/Alloc.java test/test/smoke/Threads.java test/test/smoke/SmokeTests.java test/test/smoke/LoadLibrary.java test/test/wall/WallTests.java test/test/wall/BusyClient.java test/test/wall/SocketTest.java test/test/wall/IdleClient.java test/test/alloc/AllocTests.java test/test/alloc/Hello.java test/test/alloc/RandomBlockRetainer.java test/test/alloc/MapReader.java test/test/alloc/MapReaderOpt.java test/test/nonjava/JavaClass.java test/test/nonjava/NonjavaTests.java test/test/cpu/CpuBurner.java test/test/cpu/CpuTests.java test/test/jfr/RegularPeak.java test/test/jfr/Cache.java test/test/jfr/JfrCpuProfiling.java test/test/jfr/JfrTests.java test/test/jfr/JfrMultiModeProfiling.java test/test/jfr/Ttsp.java test/test/recovery/Suppliers.java test/test/recovery/CodingIntrinsics.java test/test/recovery/RecoveryTests.java test/test/recovery/StringBuilderTest.java test/test/recovery/Numbers.java test/test/comptask/ComptaskTests.java test/test/comptask/Main.java test/test/pmu/PmuTests.java test/test/pmu/Dictionary.java test/test/lock/LockTests.java test/test/lock/DatagramTest.java test/test/otlp/CpuBurner.java test/test/otlp/OtlpTests.java test/test/stackwalker/StackGenerator.java test/test/stackwalker/StackwalkerTests.java test/test/api/BusyLoops.java test/test/api/DumpCollapsed.java test/test/api/StopResume.java test/test/api/ApiTests.java test/test/api/DumpOtlp.java test/test/c/CTests.java test/test/kernel/KernelTests.java test/test/kernel/ListFiles.java test/test/nativemem/CallsMallocCalloc.java test/test/nativemem/CallsAllNoLeak.java test/test/nativemem/CallsRealloc.java test/test/nativemem/Native.java test/test/nativemem/NativememTests.java test/test/cstack/LongInitializer.java test/test/cstack/CstackTests.java test/one/profiler/test/Arch.java test/one/profiler/test/SourceCode.java test/one/profiler/test/TestStatus.java test/one/profiler/test/TestProcess.java test/one/profiler/test/Assert.java test/one/profiler/test/Runner.java test/one/profiler/test/Test.java test/one/profiler/test/Output.java test/one/profiler/test/Jvm.java test/one/profiler/test/RunnableTest.java test/one/profiler/test/Os.java test/one/profiler/test/Tests.java test/one/profiler/test/TestResult.java test/one/profiler/test/TestDeclaration.java
+/opt/java/openjdk/bin/jar cf build/test.jar -C build/test/classes .

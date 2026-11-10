@@ -1,0 +1,11 @@
+{
+  "cases": 5000,
+  "seed": 4101,
+  "accepted": 1388,
+  "rejected": 3612,
+  "failures": [],
+  "seconds": 16.661808292003116,
+  "binary_sha256": "d55d0e0b66f4b9f577947ce30cd3a9789e0efd9a30c5d729906ade9c16a7f1ff",
+  "fixture_sha256": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+  "reader_only": false
+}

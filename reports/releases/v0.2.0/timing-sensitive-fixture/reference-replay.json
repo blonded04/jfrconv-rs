@@ -1,0 +1,6 @@
+{
+  "outputs_identical": true,
+  "samples": 112,
+  "early_calculateTop_samples": 20,
+  "note": "The unmodified historical timing fixture fails its first-window assumption for Java and Rust on this same JFR. The complete failed recording is preserved in work/regularpeak-failed-delivered.jfr."
+}

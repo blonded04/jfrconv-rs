@@ -1,0 +1,75 @@
+{
+  "version": "0.2.1",
+  "macos_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "cargo_macos": {
+    "passed": 72,
+    "failed": 0,
+    "breakdown": {
+      "unit": 52,
+      "cli_paths": 1,
+      "cli_streams": 3,
+      "compatibility": 6,
+      "edge_cases": 4,
+      "memory_limits": 6
+    },
+    "format_check": "passed",
+    "strict_clippy": "passed",
+    "reports": "../reports/ui-parity/macos-checks/checks.json"
+  },
+  "cargo_linux": {
+    "passed": 73,
+    "failed": 0,
+    "memory_tests_included": 7,
+    "root_system_device_probe_branches_skipped": 2,
+    "note": "Task FIFO and Node decoder tests ran; system-device probes passed on non-root macOS.",
+    "report": "../reports/linux/summary.json"
+  },
+  "semantic_checks": {
+    "passed": 71,
+    "failed": 0,
+    "report": "validation-v0.2.1.json"
+  },
+  "public_converter_scope": {
+    "unique_cases_passed": 15,
+    "historical_v41_declarations": 9,
+    "current_dedicated_declarations": 6,
+    "macos_passed": 14,
+    "linux_only_passed": 1,
+    "published_assertions_unchanged": true,
+    "final_macos_attempts": 1,
+    "scope_note": "Not the entire current profiler suite; pinned v4.1 converter consumers plus six dedicated public converter cases.",
+    "reports": [
+      "../reports/public-macos/v41-rust.json",
+      "../reports/public-macos/current-rust.json",
+      "../reports/linux/rust-public-tests.json"
+    ]
+  },
+  "ui": {
+    "corpus_pairs": 18,
+    "flame_pairs": 15,
+    "heatmap_pairs": 3,
+    "DPR_1_and_2_each": {
+      "page_behavior_assertions": 510,
+      "identical_interaction_phases": 195
+    },
+    "report": "../reports/ui-parity/summary.json"
+  },
+  "prior_parser_mutation_evidence": {
+    "version_under_test": "0.2.0",
+    "binary_under_test": "d55d0e0b66f4b9f577947ce30cd3a9789e0efd9a30c5d729906ade9c16a7f1ff",
+    "cases": 5000,
+    "failures": 0,
+    "parser_source_unchanged": true,
+    "parser_source_sha256": "6a8de986fce3492f3363d3afddff694361ae19107df18dbd5b56ade74a366af5",
+    "report": "parser-mutations.json",
+    "note": "Retained prior-release smoke fuzz result; not relabeled as a run against the new executable."
+  },
+  "benchmarks": {
+    "cases": 5,
+    "pairs_each": 21,
+    "measured_pairs": 105,
+    "summary": "v0.2.1-summary.json",
+    "all_median_rss_p50_p95_improved": true
+  },
+  "release_manifest": "../reports/final-release.json"
+}

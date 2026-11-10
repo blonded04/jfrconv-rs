@@ -1,0 +1,52 @@
+[
+  {
+    "name": "format",
+    "command": [
+      "cargo",
+      "fmt",
+      "--all",
+      "--",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/format.log"
+  },
+  {
+    "name": "tests",
+    "command": [
+      "cargo",
+      "test",
+      "--locked",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/tests.log"
+  },
+  {
+    "name": "clippy",
+    "command": [
+      "cargo",
+      "clippy",
+      "--all-targets",
+      "--locked",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/clippy.log"
+  },
+  {
+    "name": "release",
+    "command": [
+      "cargo",
+      "build",
+      "--release",
+      "--locked",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/release.log"
+  }
+]

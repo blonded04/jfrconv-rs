@@ -1,0 +1,60 @@
+{
+  "revision": "e98d8c2b2d6e954ed1b39685fed1b25dc08db603",
+  "suite": "current",
+  "transport_bridge": true,
+  "assertion_files_unchanged": true,
+  "command": [
+    "java",
+    "-ea",
+    "-Djava.library.path=build/test/lib",
+    "-DthreadCount=1",
+    "-DretryCount=0",
+    "-DlogDir=/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/current-rust/public-test-results/profiles",
+    "-cp",
+    "build/test.jar:build/jar/*:build/lib/*:test/deps/*:test/gen/*",
+    "one.profiler.test.Runner",
+    "JfrconverterTests"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 6.78627204100485,
+  "counts": {
+    "PASS": 6
+  },
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "tid[26] JfrconverterTests.diffCollapsed (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.collapsed)",
+      "seconds": 0.794
+    },
+    {
+      "status": "PASS",
+      "test": "tid[26] JfrconverterTests.diffHtml (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.html)",
+      "seconds": 0.724
+    },
+    {
+      "status": "PASS",
+      "test": "tid[26] JfrconverterTests.flamegraphConversion (agentArgs: start,jfr,all,file=%f)",
+      "seconds": 1.998
+    },
+    {
+      "status": "PASS",
+      "test": "tid[26] JfrconverterTests.heatmapConversion (agentArgs: start,jfr,all,file=%f)",
+      "seconds": 1.229
+    },
+    {
+      "status": "PASS",
+      "test": "tid[26] JfrconverterTests.tagFilter (agentArgs: start,jfr,wall=20ms,file=%f)",
+      "seconds": 0.894
+    },
+    {
+      "status": "PASS",
+      "test": "tid[28] JfrconverterTests.latencyFilter (agentArgs: start,jfr,wall=20ms,trace=test.jfrconverter.Tracer.traceMethod,file=%f)",
+      "seconds": 0.968
+    }
+  ],
+  "platform": "Darwin arm64",
+  "java_version": "openjdk version \"25.0.1\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 25.0.1)\nOpenJDK 64-Bit Server VM Homebrew (build 25.0.1, mixed mode, sharing)",
+  "rust_binary": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+  "adapter": "Only Output.convertJfrToCollapsed, static JfrToFlame/JfrToHeatmap.convert and Main.main transport entry points are redirected. Published test assertions are byte-for-byte unchanged. /dev/null and all actual requested output paths are passed directly to the native CLI.",
+  "rust_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497"
+}

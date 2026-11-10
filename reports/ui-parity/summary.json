@@ -1,0 +1,48 @@
+{
+  "version": "0.2.1",
+  "macos_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "java_jar_sha256": "2464b34abd47243941d81d53110591d66d7db3b3fae46c79fc85057eeddda19b",
+  "original_assets_byte_identical": {
+    "flame.html": {
+      "rust_sha256": "4e7b51b631e857f0c8ae832410adfa108ec67b3f5eed32be09acd025505c7407",
+      "java_v41_sha256": "4e7b51b631e857f0c8ae832410adfa108ec67b3f5eed32be09acd025505c7407"
+    },
+    "heatmap.html": {
+      "rust_sha256": "12e3e1907300dad8ae5a956ddce22e0322a02a76ed3603332a606a1fc6cf564b",
+      "java_v41_sha256": "12e3e1907300dad8ae5a956ddce22e0322a02a76ed3603332a606a1fc6cf564b"
+    }
+  },
+  "corpus_pairs": 18,
+  "static_template_pages_passed": 36,
+  "flame_pairs_with_matching_profiles_geometry_tiers": 15,
+  "heatmap_pairs_with_matching_decoded_data": 3,
+  "renderer_runs": [
+    {
+      "devicePixelRatio": 1,
+      "canvas_width": 1200,
+      "flame_pairs": 15,
+      "page_behavior_assertions": 510,
+      "identical_interaction_phase_comparisons": 195
+    },
+    {
+      "devicePixelRatio": 2,
+      "canvas_width": 1200,
+      "flame_pairs": 15,
+      "page_behavior_assertions": 510,
+      "identical_interaction_phase_comparisons": 195
+    }
+  ],
+  "limits": [
+    "Production flamegraph colors use original Math.random; seeded copies are test-only.",
+    "Heatmap method-ID-dependent shades can differ because compression dictionaries assign different IDs.",
+    "Rare Java HashMap tree-bin ordering and existing-key compute-hit threshold resize are not emulated.",
+    "DOM/canvas VM tests compare actual app code and draw calls; browser font/layout/dialog behavior needs browser QA."
+  ],
+  "reports": {
+    "static": "static-data-report.json",
+    "renderer_dpr1": "renderer-dpr1.json",
+    "renderer_dpr2": "renderer-dpr2.json",
+    "browser_runtime": "browser-runtime-observation.json",
+    "example": "example/index.html"
+  }
+}

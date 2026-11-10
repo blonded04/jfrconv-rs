@@ -1,0 +1,36 @@
+{
+  "binary_sha256": "86c0383ee706d967577bcf4b2de88ea2f213ba13650deff98cf45d8b3269feea",
+  "repeated_input_count": 64,
+  "repeated_first": {
+    "live": 14772,
+    "peak_reserved": 163036,
+    "rss": 3424256
+  },
+  "repeated_last": {
+    "live": 10173,
+    "peak_reserved": 163083,
+    "rss": 3948544
+  },
+  "repeated_ranges": {
+    "live": [
+      10173,
+      14772
+    ],
+    "peak_reserved": [
+      163036,
+      163083
+    ],
+    "rss": [
+      3424256,
+      3948544
+    ]
+  },
+  "ten_million_under_16MiB": [
+    {
+      "live": 1145,
+      "peak_reserved": 151670,
+      "rss": 3522560
+    }
+  ],
+  "ten_million_total": 10000000
+}

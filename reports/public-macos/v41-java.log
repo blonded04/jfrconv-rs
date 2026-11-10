@@ -1,0 +1,34 @@
+INFO: Running JfrTests.regularPeak...
+PASS [1/9] JfrTests.regularPeak took 7,052 s
+INFO: Running JfrTests.ttsp (agentArgs: start,event=cpu,ttsp,interval=1ms,jfr,file=%f)...
+Profiling started
+PASS [2/9] JfrTests.ttsp (agentArgs: start,event=cpu,ttsp,interval=1ms,jfr,file=%f) took 3,398 s
+SKIP_CONFIG_MISMATCH [3/9] NativememTests.ldpreload (args: once) took 0,000 s
+INFO: Running StackwalkerTests.deepStack/VM (args: deepFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+PASS [4/9] StackwalkerTests.deepStack/VM (args: deepFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 0,935 s
+INFO: Running StackwalkerTests.deepStack/VMX (args: deepFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+PASS [5/9] StackwalkerTests.deepStack/VMX (args: deepFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 0,921 s
+INFO: Running StackwalkerTests.largeFrame/VM (args: largeFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+PASS [6/9] StackwalkerTests.largeFrame/VM (args: largeFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 1,029 s
+INFO: Running StackwalkerTests.largeFrame/VMX (args: largeFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+PASS [7/9] StackwalkerTests.largeFrame/VMX (args: largeFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 0,965 s
+INFO: Running StackwalkerTests.normalStackVM (args: leafFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+PASS [8/9] StackwalkerTests.normalStackVM (args: leafFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 0,913 s
+INFO: Running StackwalkerTests.normalStackVMX (args: leafFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+PASS [9/9] StackwalkerTests.normalStackVMX (args: leafFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 1,340 s
+
+Total test duration: 16,553 s
+Results Summary:
+PASS: 8 (100,0%)
+FAIL: 0
+SKIP (disabled): 0
+SKIP (config mismatch): 1
+SKIP (missing JAR): 0
+TOTAL: 9
+INFO: Test output and profiles are available in /Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/v41-java/public-test-results/profiles directory

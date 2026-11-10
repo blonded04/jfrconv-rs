@@ -1,0 +1,55 @@
+INFO: Running JfrTests.regularPeak...
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f3042383296426004403.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-17820737612065377820.collapsed (112 samples/units)
+FAIL [1/9] JfrTests.regularPeak took 7,737 s
+java.lang.AssertionError
+	at test.jfr.JfrTests.regularPeak(JfrTests.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at one.profiler.test.Runner.run(Runner.java:124)
+	at one.profiler.test.Runner.main(Runner.java:188)
+INFO: Running JfrTests.ttsp (agentArgs: start,event=cpu,ttsp,interval=1ms,jfr,file=%f)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f7555940895245244448.tmp -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-11360313977099599535.collapsed (208 samples/units)
+PASS [2/9] JfrTests.ttsp (agentArgs: start,event=cpu,ttsp,interval=1ms,jfr,file=%f) took 3,355 s
+SKIP_CONFIG_MISMATCH [3/9] NativememTests.ldpreload (args: once) took 0,000 s
+INFO: Running StackwalkerTests.deepStack/VM (args: deepFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f11754772997592957073.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-16876747863172535219.collapsed (73 samples/units)
+PASS [4/9] StackwalkerTests.deepStack/VM (args: deepFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 0,932 s
+INFO: Running StackwalkerTests.deepStack/VMX (args: deepFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f6259849740844402240.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-9080265978426742504.collapsed (75 samples/units)
+PASS [5/9] StackwalkerTests.deepStack/VMX (args: deepFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 0,933 s
+INFO: Running StackwalkerTests.largeFrame/VM (args: largeFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f13300816379648405310.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-13370469080949921134.collapsed (74 samples/units)
+PASS [6/9] StackwalkerTests.largeFrame/VM (args: largeFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 0,923 s
+INFO: Running StackwalkerTests.largeFrame/VMX (args: largeFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f11950361252938893167.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-17591518153287413626.collapsed (74 samples/units)
+PASS [7/9] StackwalkerTests.largeFrame/VMX (args: largeFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 0,908 s
+INFO: Running StackwalkerTests.normalStackVM (args: leafFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f17955948880080764471.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-4386505333969738470.collapsed (74 samples/units)
+PASS [8/9] StackwalkerTests.normalStackVM (args: leafFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr) took 0,925 s
+INFO: Running StackwalkerTests.normalStackVMX (args: leafFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f14570846576152688183.jfr -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-1617224331783153241.collapsed (73 samples/units)
+PASS [9/9] StackwalkerTests.normalStackVMX (args: leafFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr) took 0,914 s
+
+Failed tests:
+JfrTests.regularPeak
+
+Total test duration: 16,625 s
+Results Summary:
+PASS: 7 (87,5%)
+FAIL: 1
+SKIP (disabled): 0
+SKIP (config mismatch): 1
+SKIP (missing JAR): 0
+TOTAL: 9
+INFO: Test output and profiles are available in /Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/v41-rust/public-test-results/profiles directory
+Exception in thread "main" java.lang.RuntimeException: One or more tests failed
+	at one.profiler.test.Runner.main(Runner.java:211)
+
+/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/v41-rust/public-test-results/public-tests.json

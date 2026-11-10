@@ -1,0 +1,41 @@
+INFO: Running with 1 test threads.
+INFO: Running JfrconverterTests.diffCollapsed (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.collapsed)...
+Converted test/test/jfrconverter/sample2.collapsed -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-diff2024312878334273754.collapsed (188 samples/units)
+PASS [1/6] tid[21] JfrconverterTests.diffCollapsed (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.collapsed) took 0,746 s
+INFO: Running JfrconverterTests.diffHtml (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.html)...
+Converted test/test/jfrconverter/sample2.collapsed -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-diff12088956642971214762.html (188 samples/units)
+PASS [2/6] tid[21] JfrconverterTests.diffHtml (args: --diff test/test/jfrconverter/sample1.collapsed test/test/jfrconverter/sample2.collapsed %diff.html) took 0,737 s
+INFO: Running JfrconverterTests.flamegraphConversion (agentArgs: start,jfr,all,file=%f)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f2077231885122152752.tmp -> /dev/null (537 samples/units)
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f2077231885122152752.tmp -> /dev/null (1289 samples/units)
+PASS [3/6] tid[21] JfrconverterTests.flamegraphConversion (agentArgs: start,jfr,all,file=%f) took 1,264 s
+INFO: Running JfrconverterTests.heatmapConversion (agentArgs: start,jfr,all,file=%f)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f9885737996175377962.tmp -> /dev/null (1342 samples/units)
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f9885737996175377962.tmp -> /dev/null (0 samples/units)
+PASS [4/6] tid[21] JfrconverterTests.heatmapConversion (agentArgs: start,jfr,all,file=%f) took 1,249 s
+INFO: Running JfrconverterTests.tagFilter (agentArgs: start,jfr,wall=20ms,file=%f)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f17924729854730758753.tmp -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-5653265731419280025.collapsed (10 samples/units)
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f17924729854730758753.tmp -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-10602380639902458182.collapsed (31 samples/units)
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f17924729854730758753.tmp -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-1730829916274663900.collapsed (0 samples/units)
+PASS [5/6] tid[21] JfrconverterTests.tagFilter (agentArgs: start,jfr,wall=20ms,file=%f) took 0,874 s
+All tasks finished and executor is terminated.
+INFO: Starting single threaded tests...
+INFO: Running JfrconverterTests.latencyFilter (agentArgs: start,jfr,wall=20ms,trace=test.jfrconverter.Tracer.traceMethod,file=%f)...
+Profiling started
+Converted /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/ap-f13027857929452478906.tmp -> /var/folders/wg/3h0ccs8546187yq0mksfq2m00000gp/T/jfrconv-public-4554553271329548180.collapsed (25 samples/units)
+PASS [6/6] tid[23] JfrconverterTests.latencyFilter (agentArgs: start,jfr,wall=20ms,trace=test.jfrconverter.Tracer.traceMethod,file=%f) took 0,963 s
+All tasks finished and executor is terminated.
+
+Total test duration: 5,834 s
+Actual execution duration: 5,842 s
+Results Summary:
+PASS: 6 (100,0%)
+FAIL: 0
+SKIP (disabled): 0
+SKIP (config mismatch): 0
+SKIP (missing JAR): 0
+TOTAL: 6
+INFO: Test output and profiles are available in /Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/current-rust/public-test-results/profiles directory

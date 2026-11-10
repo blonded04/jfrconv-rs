@@ -1,0 +1,35 @@
+{
+  "description": "Final macOS executable replays Linux ldpreload recording with complete collapsed map equality and published contains assertions. This is a host converter replay, not a replacement for native Linux tests.",
+  "rust_sha256": "d55d0e0b66f4b9f577947ce30cd3a9789e0efd9a30c5d729906ade9c16a7f1ff",
+  "java_jar_sha256": "2464b34abd47243941d81d53110591d66d7db3b3fae46c79fc85057eeddda19b",
+  "input_sha256": "3988b96f63834eb50835a2d6f1fdf5cc50c4a6e6cb4e2684f305b8fea98e9cac",
+  "input_size": 2145595,
+  "commands": {
+    "java": [
+      "java",
+      "-jar",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+      "--nativemem",
+      "-o",
+      "collapsed",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-linux/v41-rust/public-test-results/profiles/NativememTests.ldpreload/f.jfr",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/linux-final-macos-replay/java.collapsed"
+    ],
+    "rust": [
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/final-candidate/jfrconv",
+      "--nativemem",
+      "-o",
+      "collapsed",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-linux/v41-rust/public-test-results/profiles/NativememTests.ldpreload/f.jfr",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/linux-final-macos-replay/rust.collapsed"
+    ]
+  },
+  "outputs_match": true,
+  "unique_stacks": 3013,
+  "published_contains_checks": {
+    "JavaMain": true,
+    "JVM_": true,
+    "malloc_hook": true
+  },
+  "total_units": 76293
+}

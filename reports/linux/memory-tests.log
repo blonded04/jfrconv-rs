@@ -1,0 +1,13 @@
+     Running tests/memory_limits.rs (/work/linux-target/release/deps/memory_limits-41273ca204c44634)
+
+running 7 tests
+test later_budget_failure_discards_earlier_staged_results_for_the_whole_worker ... ok
+test limited_diff_with_implicit_output_uses_working_directory_for_scratch ... ok
+test repeated_inputs_release_live_heap_and_resident_memory_plateaus ... ok
+test restrictive_address_space_limit_exits_cleanly_instead_of_aborting ... ok
+test sixteen_megabyte_budget_handles_a_million_samples_with_fixed_cardinality ... ok
+test thirty_two_megabyte_rss_guard_succeeds_and_observes_worker_resident_memory ... ok
+test tiny_allocation_budget_preserves_output_and_cleans_both_scratch_directories ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+

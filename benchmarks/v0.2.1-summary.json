@@ -1,0 +1,163 @@
+{
+  "version": "0.2.1",
+  "rust_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "pairs_per_case_predeclared": 21,
+  "case_count": 5,
+  "measured_pairs": 105,
+  "all_rows_have_lower_median_rss_and_p50_p95_latency": true,
+  "method": "Same fresh-process/one-equal-warmup/alternating-order procedure as v0.2.0. First pair retained separately; p50 median; p95 nearest-rank. No trials discarded. Page-cache state uncontrolled. wait4 command high-water RSS; no simultaneous process-tree RSS claim.",
+  "plan": "v0.2.1-plan.json",
+  "rows": [
+    {
+      "case": "2M collapsed",
+      "report": "v0.2.1-collapsed.json",
+      "input": "work/fixtures/2000000-samples.jfr",
+      "input_sha256": "298e91ed2dd88afa93790c46073f0dcfb0d4bf43f6e7772eb8739fadda95c199",
+      "pairs": 21,
+      "flags": [
+        "--cpu"
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 98254848,
+        "p95_peak_rss_bytes": 98811904,
+        "max_peak_rss_bytes": 99237888,
+        "median_wall_seconds": 0.10895141700166278,
+        "p95_wall_seconds": 0.11717366700759158,
+        "max_wall_seconds": 0.12072604199056514
+      },
+      "rust": {
+        "median_peak_rss_bytes": 3571712,
+        "p95_peak_rss_bytes": 3735552,
+        "max_peak_rss_bytes": 3850240,
+        "median_wall_seconds": 0.029758708988083526,
+        "p95_wall_seconds": 0.033495499985292554,
+        "max_wall_seconds": 0.04168824999942444
+      },
+      "rss_reduction_percent": 96.36484909121226,
+      "p50_speedup_ratio": 3.6611607393751826,
+      "p95_speedup_ratio": 3.4981913110430067
+    },
+    {
+      "case": "10M collapsed",
+      "report": "v0.2.1-collapsed.json",
+      "input": "work/fixtures/10000000-samples.jfr",
+      "input_sha256": "86a8e2a1d047554c2045dab952622d9a48548fc3bfd80f39953cace61018d012",
+      "pairs": 21,
+      "flags": [
+        "--cpu"
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 206782464,
+        "p95_peak_rss_bytes": 208175104,
+        "max_peak_rss_bytes": 208732160,
+        "median_wall_seconds": 0.2339696660055779,
+        "p95_wall_seconds": 0.27324041599058546,
+        "max_wall_seconds": 0.3044743749778718
+      },
+      "rust": {
+        "median_peak_rss_bytes": 3751936,
+        "p95_peak_rss_bytes": 3817472,
+        "max_peak_rss_bytes": 3883008,
+        "median_wall_seconds": 0.13950641700648703,
+        "p95_wall_seconds": 0.1587442499876488,
+        "max_wall_seconds": 0.1642625000094995
+      },
+      "rss_reduction_percent": 98.18556374296807,
+      "p50_speedup_ratio": 1.6771247590331155,
+      "p95_speedup_ratio": 1.7212618158569215
+    },
+    {
+      "case": "2M html",
+      "report": "v0.2.1-html.json",
+      "input": "work/fixtures/2000000-samples.jfr",
+      "input_sha256": "298e91ed2dd88afa93790c46073f0dcfb0d4bf43f6e7772eb8739fadda95c199",
+      "pairs": 21,
+      "flags": [
+        "--cpu"
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 99172352,
+        "p95_peak_rss_bytes": 99663872,
+        "max_peak_rss_bytes": 99680256,
+        "median_wall_seconds": 0.11352991600870155,
+        "p95_wall_seconds": 0.12705449998611584,
+        "max_wall_seconds": 0.13659308300702833
+      },
+      "rust": {
+        "median_peak_rss_bytes": 3588096,
+        "p95_peak_rss_bytes": 3702784,
+        "max_peak_rss_bytes": 3735552,
+        "median_wall_seconds": 0.029606583004351705,
+        "p95_wall_seconds": 0.03239499998744577,
+        "max_wall_seconds": 0.03273224999429658
+      },
+      "rss_reduction_percent": 96.38195935899554,
+      "p50_speedup_ratio": 3.8346173211550427,
+      "p95_speedup_ratio": 3.9220404394305923
+    },
+    {
+      "case": "2M diverse HTML --lines",
+      "report": "v0.2.1-diverse-html.json",
+      "input": "work/fixtures/2000000-high-cardinality.jfr",
+      "input_sha256": "acb11419fd390425986a09409a7281fbe6dda6c8e4d3c8f6eb573e5b0090cb76",
+      "pairs": 21,
+      "flags": [
+        "--cpu",
+        "--lines"
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 207667200,
+        "p95_peak_rss_bytes": 209829888,
+        "max_peak_rss_bytes": 209960960,
+        "median_wall_seconds": 0.553445334022399,
+        "p95_wall_seconds": 0.5930804160016123,
+        "max_wall_seconds": 0.6129019169893581
+      },
+      "rust": {
+        "median_peak_rss_bytes": 59916288,
+        "p95_peak_rss_bytes": 71548928,
+        "max_peak_rss_bytes": 74678272,
+        "median_wall_seconds": 0.31051795798703097,
+        "p95_wall_seconds": 0.34575670800404623,
+        "max_wall_seconds": 0.34729745899676345
+      },
+      "rss_reduction_percent": 71.14792899408285,
+      "p50_speedup_ratio": 1.7823295554633078,
+      "p95_speedup_ratio": 1.7153113801473139
+    },
+    {
+      "case": "2M heatmap",
+      "report": "v0.2.1-heatmap.json",
+      "input": "work/fixtures/2000000-samples.jfr",
+      "input_sha256": "298e91ed2dd88afa93790c46073f0dcfb0d4bf43f6e7772eb8739fadda95c199",
+      "pairs": 21,
+      "flags": [
+        "--cpu"
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 261226496,
+        "p95_peak_rss_bytes": 262946816,
+        "max_peak_rss_bytes": 264470528,
+        "median_wall_seconds": 0.2754978330049198,
+        "p95_wall_seconds": 0.30005470899050124,
+        "max_wall_seconds": 0.4056179999897722
+      },
+      "rust": {
+        "median_peak_rss_bytes": 3948544,
+        "p95_peak_rss_bytes": 4079616,
+        "max_peak_rss_bytes": 4145152,
+        "median_wall_seconds": 0.12870112498058006,
+        "p95_wall_seconds": 0.13837908301502466,
+        "max_wall_seconds": 0.15431816698401235
+      },
+      "rss_reduction_percent": 98.48845960863021,
+      "p50_speedup_ratio": 2.1406015918391557,
+      "p95_speedup_ratio": 2.1683530664668624
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "description": "Quiet balanced old/new native OTLP experiment; all raw observations retained. One warm-up per executable/input; seven pairs with alternating order.",
+  "old_binary_sha256": "a2ed10e46706fe85808dbb7092331c17cbe5dc0442cc2a359feb2157e338f723",
+  "new_binary_sha256": "633c9e36789cca0b96baea955099db941a9b24d72062c865746d081e5fae700a",
+  "platform": "macOS-15.8.2-arm64-arm-64bit-Mach-O",
+  "source_changes": [
+    "src/export.rs: encode each chunk once to bounded temp spool; direct per-sample lengths",
+    "src/proto.rs: remove unused Count measurement helper"
+  ],
+  "cases": [
+    {
+      "name": "diverse",
+      "input": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/2000000-high-cardinality.jfr",
+      "flags": [
+        "--cpu",
+        "--lines",
+        "-o",
+        "otlp"
+      ],
+      "warmup": {
+        "old": {
+          "wall_seconds": 0.2967177919927053,
+          "cpu_seconds": 0.275888,
+          "user_seconds": 0.254573,
+          "sys_seconds": 0.021315,
+          "rss_bytes": 49233920,
+          "major_faults": 0,
+          "minor_faults": 3339
+        },
+        "new": {
+          "wall_seconds": 0.3942542079894338,
+          "cpu_seconds": 0.237645,
+          "user_seconds": 0.216478,
+          "sys_seconds": 0.021167,
+          "rss_bytes": 54378496,
+          "major_faults": 0,
+          "minor_faults": 3679
+        }
+      },
+      "raw": {
+        "old": [
+          {
+            "wall_seconds": 0.2835047090193257,
+            "cpu_seconds": 0.274512,
+            "user_seconds": 0.25607399999999997,
+            "sys_seconds": 0.018438,
+            "rss_bytes": 60620800,
+            "major_faults": 0,
+            "minor_faults": 4240,
+            "pair": 1,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.291107249999186,
+            "cpu_seconds": 0.277659,
+            "user_seconds": 0.257166,
+            "sys_seconds": 0.020493,
+            "rss_bytes": 51396608,
+            "major_faults": 4,
+            "minor_faults": 3567,
+            "pair": 2,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.31939175000297837,
+            "cpu_seconds": 0.305175,
+            "user_seconds": 0.283655,
+            "sys_seconds": 0.021519999999999997,
+            "rss_bytes": 48087040,
+            "major_faults": 0,
+            "minor_faults": 3329,
+            "pair": 3,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.2934502089919988,
+            "cpu_seconds": 0.273847,
+            "user_seconds": 0.256756,
+            "sys_seconds": 0.017091,
+            "rss_bytes": 50642944,
+            "major_faults": 0,
+            "minor_faults": 3490,
+            "pair": 4,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.2821273749868851,
+            "cpu_seconds": 0.27178099999999994,
+            "user_seconds": 0.25396599999999997,
+            "sys_seconds": 0.017814999999999998,
+            "rss_bytes": 59146240,
+            "major_faults": 0,
+            "minor_faults": 4083,
+            "pair": 5,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.28792070801137015,
+            "cpu_seconds": 0.273907,
+            "user_seconds": 0.254262,
+            "sys_seconds": 0.019645,
+            "rss_bytes": 57114624,
+            "major_faults": 0,
+            "minor_faults": 3867,
+            "pair": 6,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.34352504200069234,
+            "cpu_seconds": 0.294798,
+            "user_seconds": 0.2691,
+            "sys_seconds": 0.025698,
+            "rss_bytes": 52871168,
+            "major_faults": 0,
+            "minor_faults": 3659,
+            "pair": 7,
+            "order": [
+              "old",
+              "new"
+            ]
+          }
+        ],
+        "new": [
+          {
+            "wall_seconds": 0.2529575840162579,
+            "cpu_seconds": 0.23984999999999998,
+            "user_seconds": 0.21879099999999999,
+            "sys_seconds": 0.021058999999999998,
+            "rss_bytes": 58228736,
+            "major_faults": 0,
+            "minor_faults": 4038,
+            "pair": 1,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.2562866660009604,
+            "cpu_seconds": 0.242963,
+            "user_seconds": 0.221971,
+            "sys_seconds": 0.020992,
+            "rss_bytes": 48365568,
+            "major_faults": 0,
+            "minor_faults": 3364,
+            "pair": 2,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.25458766700467095,
+            "cpu_seconds": 0.23745399999999997,
+            "user_seconds": 0.21725999999999998,
+            "sys_seconds": 0.020194,
+            "rss_bytes": 43843584,
+            "major_faults": 0,
+            "minor_faults": 2948,
+            "pair": 3,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.2504574169870466,
+            "cpu_seconds": 0.23713099999999998,
+            "user_seconds": 0.216686,
+            "sys_seconds": 0.020444999999999998,
+            "rss_bytes": 60063744,
+            "major_faults": 0,
+            "minor_faults": 4053,
+            "pair": 4,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.27160720800748095,
+            "cpu_seconds": 0.250223,
+            "user_seconds": 0.22674799999999998,
+            "sys_seconds": 0.023475,
+            "rss_bytes": 51314688,
+            "major_faults": 0,
+            "minor_faults": 3535,
+            "pair": 5,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.25058012499357574,
+            "cpu_seconds": 0.237615,
+            "user_seconds": 0.217717,
+            "sys_seconds": 0.019898,
+            "rss_bytes": 60801024,
+            "major_faults": 0,
+            "minor_faults": 3986,
+            "pair": 6,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.34306675000698306,
+            "cpu_seconds": 0.29213599999999995,
+            "user_seconds": 0.25701599999999997,
+            "sys_seconds": 0.03512,
+            "rss_bytes": 54624256,
+            "major_faults": 0,
+            "minor_faults": 3681,
+            "pair": 7,
+            "order": [
+              "old",
+              "new"
+            ]
+          }
+        ]
+      },
+      "byte_identical": true,
+      "output_sha256": "6d66683f7a6db3f141ac3f56504e7035741fb4abd531b0c0df80cc6b4a0a43ac",
+      "old": {
+        "p50_wall": 0.291107249999186,
+        "p95_wall": 0.34352504200069234,
+        "p50_cpu": 0.274512,
+        "p95_cpu": 0.305175,
+        "median_rss_bytes": 52871168
+      },
+      "new": {
+        "p50_wall": 0.25458766700467095,
+        "p95_wall": 0.34306675000698306,
+        "p50_cpu": 0.23984999999999998,
+        "p95_cpu": 0.29213599999999995,
+        "median_rss_bytes": 54624256
+      }
+    },
+    {
+      "name": "repeat",
+      "input": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/2000000-samples.jfr",
+      "flags": [
+        "--cpu",
+        "--lines",
+        "-o",
+        "otlp"
+      ],
+      "warmup": {
+        "old": {
+          "wall_seconds": 0.13272904200130142,
+          "cpu_seconds": 0.03648,
+          "user_seconds": 0.027025,
+          "sys_seconds": 0.009455,
+          "rss_bytes": 3719168,
+          "major_faults": 0,
+          "minor_faults": 495
+        },
+        "new": {
+          "wall_seconds": 0.03157754099811427,
+          "cpu_seconds": 0.029872,
+          "user_seconds": 0.026142,
+          "sys_seconds": 0.00373,
+          "rss_bytes": 3735552,
+          "major_faults": 0,
+          "minor_faults": 498
+        }
+      },
+      "raw": {
+        "old": [
+          {
+            "wall_seconds": 0.030471959005808458,
+            "cpu_seconds": 0.029212000000000002,
+            "user_seconds": 0.026109,
+            "sys_seconds": 0.003103,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 495,
+            "pair": 1,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.030861334002111107,
+            "cpu_seconds": 0.029226999999999996,
+            "user_seconds": 0.026046999999999997,
+            "sys_seconds": 0.0031799999999999997,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 495,
+            "pair": 2,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.030860124999890104,
+            "cpu_seconds": 0.029181,
+            "user_seconds": 0.026003,
+            "sys_seconds": 0.003178,
+            "rss_bytes": 3719168,
+            "major_faults": 0,
+            "minor_faults": 489,
+            "pair": 3,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.03677000000607222,
+            "cpu_seconds": 0.029450999999999998,
+            "user_seconds": 0.026269999999999998,
+            "sys_seconds": 0.003181,
+            "rss_bytes": 3751936,
+            "major_faults": 0,
+            "minor_faults": 492,
+            "pair": 4,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.031401250016642734,
+            "cpu_seconds": 0.029592999999999998,
+            "user_seconds": 0.026403,
+            "sys_seconds": 0.0031899999999999997,
+            "rss_bytes": 3768320,
+            "major_faults": 0,
+            "minor_faults": 489,
+            "pair": 5,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.03168704200652428,
+            "cpu_seconds": 0.029816999999999996,
+            "user_seconds": 0.026296999999999997,
+            "sys_seconds": 0.0035199999999999997,
+            "rss_bytes": 3719168,
+            "major_faults": 0,
+            "minor_faults": 493,
+            "pair": 6,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.031334917002823204,
+            "cpu_seconds": 0.029547999999999998,
+            "user_seconds": 0.026206999999999998,
+            "sys_seconds": 0.003341,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 493,
+            "pair": 7,
+            "order": [
+              "old",
+              "new"
+            ]
+          }
+        ],
+        "new": [
+          {
+            "wall_seconds": 0.030817291990388185,
+            "cpu_seconds": 0.029336,
+            "user_seconds": 0.025939,
+            "sys_seconds": 0.003397,
+            "rss_bytes": 3670016,
+            "major_faults": 0,
+            "minor_faults": 487,
+            "pair": 1,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.030871958995703608,
+            "cpu_seconds": 0.029203,
+            "user_seconds": 0.025963,
+            "sys_seconds": 0.00324,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 493,
+            "pair": 2,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.031517499999608845,
+            "cpu_seconds": 0.029684999999999996,
+            "user_seconds": 0.026098999999999997,
+            "sys_seconds": 0.0035859999999999998,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 494,
+            "pair": 3,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.030597584001952782,
+            "cpu_seconds": 0.029123999999999997,
+            "user_seconds": 0.025897999999999997,
+            "sys_seconds": 0.0032259999999999997,
+            "rss_bytes": 3719168,
+            "major_faults": 0,
+            "minor_faults": 491,
+            "pair": 4,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.03329366698744707,
+            "cpu_seconds": 0.029719,
+            "user_seconds": 0.026345999999999998,
+            "sys_seconds": 0.0033729999999999997,
+            "rss_bytes": 3784704,
+            "major_faults": 0,
+            "minor_faults": 495,
+            "pair": 5,
+            "order": [
+              "old",
+              "new"
+            ]
+          },
+          {
+            "wall_seconds": 0.03428866597823799,
+            "cpu_seconds": 0.031577,
+            "user_seconds": 0.026659,
+            "sys_seconds": 0.004918,
+            "rss_bytes": 3833856,
+            "major_faults": 23,
+            "minor_faults": 475,
+            "pair": 6,
+            "order": [
+              "new",
+              "old"
+            ]
+          },
+          {
+            "wall_seconds": 0.03144250001059845,
+            "cpu_seconds": 0.029545,
+            "user_seconds": 0.026154999999999998,
+            "sys_seconds": 0.00339,
+            "rss_bytes": 3883008,
+            "major_faults": 0,
+            "minor_faults": 510,
+            "pair": 7,
+            "order": [
+              "old",
+              "new"
+            ]
+          }
+        ]
+      },
+      "byte_identical": true,
+      "output_sha256": "4c353caa938d645ba1778042119fc7ff40644d037ac0188a75d77f00561afc95",
+      "old": {
+        "p50_wall": 0.031334917002823204,
+        "p95_wall": 0.03677000000607222,
+        "p50_cpu": 0.029450999999999998,
+        "p95_cpu": 0.029816999999999996,
+        "median_rss_bytes": 3768320
+      },
+      "new": {
+        "p50_wall": 0.03144250001059845,
+        "p95_wall": 0.03428866597823799,
+        "p50_cpu": 0.029545,
+        "p95_cpu": 0.031577,
+        "median_rss_bytes": 3784704
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "final_macos_binary_sha256": "d55d0e0b66f4b9f577947ce30cd3a9789e0efd9a30c5d729906ade9c16a7f1ff",
+  "cargo_macos": {
+    "passed": 68,
+    "failed": 0,
+    "breakdown": {
+      "unit": 48,
+      "cli_paths": 1,
+      "cli_streams": 3,
+      "compatibility": 6,
+      "edge_cases": 4,
+      "memory_limits": 6
+    },
+    "format_check": "passed",
+    "strict_clippy": "passed",
+    "evidence_source": "Root agent completed checks from saved repository."
+  },
+  "semantic_checks": {
+    "passed": 71,
+    "failed": 0,
+    "report": "validation.json"
+  },
+  "mutations": {
+    "cases": 5000,
+    "failures": 0,
+    "report": "parser-mutations.json"
+  },
+  "public_converter_scope": {
+    "unique_cases": 15,
+    "historical_v41_converter_consumers": 9,
+    "current_dedicated_jfrconverter_tests": 6,
+    "final_macos_passed": 14,
+    "linux_only_passed": 1,
+    "published_assertion_files_unchanged": true,
+    "scope_note": "Not a claim that the entire current async-profiler profiler test tree was run.",
+    "timing_sensitive_fixture": "regularPeak required one retry; Java and Rust agreed exactly on the failed recording; retained reports/timing-sensitive-fixture."
+  },
+  "linux_final_recheck": {
+    "status": "FINAL VERIFIED",
+    "report": "../reports/linux/summary.json",
+    "cargo_passed": 69,
+    "cargo_failed": 0,
+    "memory_tests_included": 7,
+    "published_java_passed": 1,
+    "published_rust_passed": 1,
+    "source_files_matching_final_macos": 29,
+    "source_tree_sha256": "25a021b9c22f65c6bcff78183b811d64701118f5e5fe3e4c5fcb557bc94777a6",
+    "linux_binary_sha256": "b80e9b7c6311664beeff85206079725959285c0e66bdec5e52af3f47f2f64ad8",
+    "root_guard_branches": [
+      "SKIP direct /dev/null identity probe as root; task-owned FIFO is tested",
+      "SKIP system descriptor aliases as root; task-owned FIFO is tested"
+    ],
+    "portable_linux_release_artifact": false
+  },
+  "benchmarks": {
+    "summary": "summary.json",
+    "reports": [
+      "defaults-collapsed",
+      "high-cardinality-collapsed",
+      "real-recordings-collapsed",
+      "format-html",
+      "format-pprof",
+      "format-pb.gz",
+      "format-otlp",
+      "heatmap-low-cardinality",
+      "heatmap-high-cardinality",
+      "tuned-java-collapsed",
+      "sustained-limited",
+      "current-public-java",
+      "existing-user-jar"
+    ]
+  },
+  "release_manifest": "../reports/final-release.json",
+  "linux_recording_final_macos_replay": "../reports/linux/final-macos-replay.json"
+}

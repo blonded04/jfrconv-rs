@@ -1,0 +1,24 @@
+[package]
+name = "jfrconv-rs"
+version = "0.2.1"
+edition = "2021"
+rust-version = "1.85"
+description = "A native, memory-conscious profile converter targeting async-profiler 4.1"
+license = "Apache-2.0"
+
+[[bin]]
+name = "jfrconv"
+path = "src/main.rs"
+
+[dependencies]
+regex = "1"
+flate2 = { version = "1", default-features = false, features = ["zlib-rs"] }
+chrono = "0.4"
+tempfile = "3"
+libc = "0.2"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+

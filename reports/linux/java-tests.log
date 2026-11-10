@@ -1,0 +1,13 @@
+INFO: Running NativememTests.ldpreload (args: once)...
+Profiling started
+PASS [1/1] NativememTests.ldpreload (args: once) took 0.855 s
+
+Total test duration: 0.855 s
+Results Summary:
+PASS: 1 (100.0%)
+FAIL: 0
+SKIP (disabled): 0
+SKIP (config mismatch): 0
+SKIP (missing JAR): 0
+TOTAL: 1
+INFO: Test output and profiles are available in /work/v41-java/public-test-results/profiles directory

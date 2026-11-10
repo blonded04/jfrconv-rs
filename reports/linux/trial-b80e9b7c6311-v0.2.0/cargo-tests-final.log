@@ -1,0 +1,109 @@
+   Compiling jfrconv-rs v0.2.0 (/work/source-snapshot)
+    Finished `release` profile [optimized] target(s) in 46.52s
+     Running unittests src/main.rs (/work/linux-target/release/deps/jfrconv-adbb66f58d93ab77)
+
+running 48 tests
+test args::tests::calendar_fraction_is_literal_milliseconds_like_v41 ... ok
+test args::tests::matches_entire_frame_and_java_quotes ... ok
+test args::tests::rejects_invalid_numbers_and_missing_values ... ok
+test convert::tests::normalizes_lambda_arrays_and_simple_names ... ok
+test convert::tests::overlapping_span_intervals_are_inclusive ... ok
+test export::tests::collapsed_retains_prefixes_and_execution_suffixes ... ok
+test export::tests::deep_stacks_export_without_recursion ... ok
+test export::tests::differential_exports_use_upstream_ui_and_reconstruct_current_graph ... ok
+test export::tests::encoded_otlp_spool_crosses_buffers_with_exact_chunk_lengths_and_large_values ... ok
+test export::tests::html_escapes_title_and_script_data ... ok
+test export::tests::html_preserves_java_constructor_names_and_protects_packed_prefixes ... ok
+test export::tests::otlp_contains_dual_values_and_original_first_timestamp ... ok
+test export::tests::pprof_has_leaf_first_locations_and_thread_label ... ok
+test export::tests::protobuf_dictionaries_deduplicate_names_and_skip_unused_frame_variants ... ok
+test export::tests::spooled_otlp_retains_chunk_groups_and_default_thread_attributes ... ok
+test heatmap::sort::tests::compaction_coalesces_equal_keys_across_more_than_fan_in_runs ... ok
+test heatmap::sort::tests::external_runs_sort_and_coalesce_all_keys ... ok
+test heatmap::sort::tests::weighted_millions_stay_compact_and_reject_invalid_counts ... ok
+test heatmap::tests::multiplicities_reject_zero_overflow_and_30_bit_excess ... ok
+test heatmap::tests::unchanged_upstream_template_is_used ... ok
+test heatmap::tests::upstream_decoder_reads_sorted_blocks_and_shared_prefixes ... ok
+test heatmap::tests::weighted_millions_prepare_compactly_using_physical_counts ... ok
+test input::tests::collapsed_types_and_reverse_preserve_thread_grouping ... ok
+test input::tests::imports_v41_compact_html_with_unicode_and_reused_widths ... ok
+test input::tests::malformed_html_and_collapsed_fail_without_panics ... ok
+test input::tests::own_html_roundtrip_preserves_escaping_and_mixed_java_counters ... ok
+test jfr::tests::extension_span_uses_string_constant_pool_without_stack_and_method_trace_has_method ... ok
+test jfr::tests::fast_lookahead_never_accepts_values_past_record_boundary ... ok
+test jfr::tests::jfr_varlong_roundtrips_full_width_and_signed_delta_bits ... ok
+test jfr::tests::selected_event_stream_preserves_weights_and_validates_before_callback ... ok
+test jfr::tests::strings_handle_encodings_and_reject_invalid_counts ... ok
+test jfr::tests::truncated_varlong_and_cross_record_reads_fail ... ok
+test jfr::tests::varints_cross_buffer_boundaries_and_seeks_keep_positions ... ok
+test leak_sort::tests::compaction_merges_more_than_descriptor_budget ... ok
+test leak_sort::tests::disk_runs_merge_and_preserve_equal_timestamp_order ... ok
+test leak_sort::tests::memory_path_orders_timestamps_stably ... ok
+test leak_sort::tests::truncated_spill_record_returns_an_error ... ok
+test memory::tests::current_process_has_observable_resident_memory ... ok
+test memory::tests::descriptor_stream_preserves_regular_file_identity_and_current_offset ... ok
+test memory::tests::path_codec_preserves_non_utf8_unix_path_bytes ... ok
+test memory::tests::refuses_unexpected_destinations_and_excessive_manifest_lengths ... ok
+test memory::tests::sizes_are_checked_and_unambiguous ... ok
+test memory::tests::staged_outputs_do_not_replace_prior_results_until_publication ... ok
+test memory::tests::symlink_to_character_device_is_copied_without_replacing_the_symlink ... ok
+test memory::tests::validates_every_staged_file_before_replacing_any_destination ... ok
+test model::tests::shares_prefixes_and_preserves_java_type_counts ... ok
+test proto::tests::largest_varint_uses_ten_bytes ... ok
+test proto::tests::nested_message_has_exact_lengths ... ok
+
+test result: ok. 48 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s
+
+     Running tests/cli_paths.rs (/work/linux-target/release/deps/cli_paths-9e071c40fd26c7bd)
+
+running 1 test
+test preserves_dotted_input_names_in_multi_file_output_directories ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/cli_streams.rs (/work/linux-target/release/deps/cli_streams-78a80f974d7ad01e)
+
+running 3 tests
+test dev_null_succeeds_without_replacing_the_character_device ... SKIP direct /dev/null identity probe as root; task-owned FIFO is tested
+ok
+test stdout_descriptor_aliases_preserve_identity_and_existing_offset ... SKIP system descriptor aliases as root; task-owned FIFO is tested
+ok
+test task_owned_fifo_is_streamed_without_replacing_its_inode ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/compatibility.rs (/work/linux-target/release/deps/compatibility-3f5082bce418b136)
+
+running 6 tests
+test converts_lock_ticks_with_each_chunks_clock_rate ... ok
+test current_span_api_filter_crosses_chunks_and_reads_constant_pool_tag ... ok
+test filters_samples_by_span_tag ... ok
+test leak_analysis_orders_events_and_keeps_original_chunk_stack ... ok
+test matches_v41_collapsed_golden_outputs ... ok
+test rejects_invalid_and_truncated_inputs_without_panicking ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+     Running tests/edge_cases.rs (/work/linux-target/release/deps/edge_cases-619ded986d4bc0e9)
+
+running 4 tests
+test collapsed_output_omits_empty_stacks_like_v41 ... ok
+test method_trace_appends_explicit_method_and_converts_duration_to_nanoseconds ... ok
+test otlp_keeps_empty_stack_counts_and_values ... ok
+test pprof_keeps_samples_with_zero_or_missing_stack_ids ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests/memory_limits.rs (/work/linux-target/release/deps/memory_limits-7b89322b5e380363)
+
+running 7 tests
+test later_budget_failure_discards_earlier_staged_results_for_the_whole_worker ... ok
+test limited_diff_with_implicit_output_uses_working_directory_for_scratch ... ok
+test repeated_inputs_release_live_heap_and_resident_memory_plateaus ... ok
+test restrictive_address_space_limit_exits_cleanly_instead_of_aborting ... ok
+test sixteen_megabyte_budget_handles_a_million_samples_with_fixed_cardinality ... ok
+test thirty_two_megabyte_rss_guard_succeeds_and_observes_worker_resident_memory ... ok
+test tiny_allocation_budget_preserves_output_and_cleans_both_scratch_directories ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+

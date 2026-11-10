@@ -1,0 +1,14 @@
+INFO: Running NativememTests.ldpreload (args: once)...
+Profiling started
+Converted /tmp/ap-f7458686669428246016.jfr -> /tmp/jfrconv-public-3891766092805889515.collapsed (76295 samples/units)
+PASS [1/1] NativememTests.ldpreload (args: once) took 1.050 s
+
+Total test duration: 1.050 s
+Results Summary:
+PASS: 1 (100.0%)
+FAIL: 0
+SKIP (disabled): 0
+SKIP (config mismatch): 0
+SKIP (missing JAR): 0
+TOTAL: 1
+INFO: Test output and profiles are available in /work/v41-rust/public-test-results/profiles directory

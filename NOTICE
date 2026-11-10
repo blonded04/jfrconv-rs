@@ -1,0 +1,12 @@
+jfrconv-rs
+
+Portions are derived from async-profiler version 4.1, commit
+5930966a92860f6e5d2d89ab6faab5815720bad9.
+Copyright The async-profiler authors. Licensed under Apache-2.0.
+
+The HTML flame graph template in assets/flame.html is from that release.
+The original heatmap template in assets/heatmap.html is from that release.
+
+Differential flame graph behavior and assets/flame-diff.html are derived from
+async-profiler commit e98d8c2b2d6e954ed1b39685fed1b25dc08db603
+(public master, 2026-11-09), with the same Apache-2.0 attribution.

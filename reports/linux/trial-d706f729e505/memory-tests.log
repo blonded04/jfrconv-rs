@@ -1,0 +1,21 @@
+   Compiling libc v0.2.191
+   Compiling num-traits v0.2.19
+   Compiling rustix v1.1.6
+   Compiling getrandom v0.4.3
+   Compiling chrono v0.4.45
+   Compiling tempfile v3.27.0
+   Compiling jfrconv-rs v0.2.0 (/work/source-snapshot)
+    Finished `release` profile [optimized] target(s) in 14.84s
+     Running tests/memory_limits.rs (/work/linux-target/release/deps/memory_limits-7b89322b5e380363)
+
+running 7 tests
+test later_budget_failure_discards_earlier_staged_results_for_the_whole_worker ... ok
+test limited_diff_with_implicit_output_uses_working_directory_for_scratch ... ok
+test repeated_inputs_release_live_heap_and_resident_memory_plateaus ... ok
+test restrictive_address_space_limit_exits_cleanly_instead_of_aborting ... ok
+test sixteen_megabyte_budget_handles_a_million_samples_with_fixed_cardinality ... ok
+test thirty_two_megabyte_rss_guard_succeeds_and_observes_worker_resident_memory ... ok
+test tiny_allocation_budget_preserves_output_and_cleans_both_scratch_directories ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+

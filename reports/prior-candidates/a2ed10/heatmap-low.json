@@ -1,0 +1,557 @@
+{
+  "command": [
+    "outputs/jfrconv-rs/tools/benchmark.py",
+    "--rust",
+    "work/final-candidate/jfrconv",
+    "--java-jar",
+    "work/async-profiler-4.1/build/jar/jfr-converter.jar",
+    "--input",
+    "work/fixtures/2000000-samples.jfr",
+    "--format",
+    "heatmap",
+    "--repeat",
+    "21",
+    "--warmup",
+    "1",
+    "--workdir",
+    "work/v02-benchmark-heatmap-low"
+  ],
+  "rust_binary_source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/final-candidate/jfrconv",
+  "java_jar_source": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+  "java_version": "openjdk version \"25.0.1\" 2025-10-21\nOpenJDK Runtime Environment Homebrew (build 25.0.1)\nOpenJDK 64-Bit Server VM Homebrew (build 25.0.1, mixed mode, sharing)",
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpus": 8
+  },
+  "rust_binary_sha256": "a2ed10e46706fe85808dbb7092331c17cbe5dc0442cc2a359feb2157e338f723",
+  "java_jar_sha256": "2464b34abd47243941d81d53110591d66d7db3b3fae46c79fc85057eeddda19b",
+  "platform": "macOS-15.8.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.0",
+  "repeat": 21,
+  "warmups_per_implementation": 1,
+  "format": "heatmap",
+  "java_options": [],
+  "flags": [
+    "--cpu"
+  ],
+  "rust_flags": [],
+  "method": "Fresh processes measured with wait4 child ru_maxrss; equal warmups; alternating pair order; p50 median and p95 nearest-rank; first fresh pair kept separate; input page-cache state uncontrolled; macOS RSS bytes, Linux KiB normalized to bytes.",
+  "recordings": [
+    {
+      "input": "work/fixtures/2000000-samples.jfr",
+      "input_bytes": 20009416,
+      "input_sha256": "298e91ed2dd88afa93790c46073f0dcfb0d4bf43f6e7772eb8739fadda95c199",
+      "input_count_per_process": 1,
+      "processed_input_bytes_per_process": 20009416,
+      "runs": {
+        "java": [
+          {
+            "peak_rss_bytes": 260554752,
+            "wall_seconds": 0.28094520801096223,
+            "user_cpu_seconds": 0.477857,
+            "system_cpu_seconds": 0.048928,
+            "major_faults": 0,
+            "minor_faults": 17169
+          },
+          {
+            "peak_rss_bytes": 260571136,
+            "wall_seconds": 0.2780627089960035,
+            "user_cpu_seconds": 0.473711,
+            "system_cpu_seconds": 0.048003,
+            "major_faults": 0,
+            "minor_faults": 17181
+          },
+          {
+            "peak_rss_bytes": 260751360,
+            "wall_seconds": 0.2780802090128418,
+            "user_cpu_seconds": 0.473933,
+            "system_cpu_seconds": 0.053897,
+            "major_faults": 8,
+            "minor_faults": 17178
+          },
+          {
+            "peak_rss_bytes": 259719168,
+            "wall_seconds": 0.2761402500036638,
+            "user_cpu_seconds": 0.457153,
+            "system_cpu_seconds": 0.050337,
+            "major_faults": 0,
+            "minor_faults": 17116
+          },
+          {
+            "peak_rss_bytes": 260915200,
+            "wall_seconds": 0.2903773750003893,
+            "user_cpu_seconds": 0.491739,
+            "system_cpu_seconds": 0.053085,
+            "major_faults": 0,
+            "minor_faults": 17190
+          },
+          {
+            "peak_rss_bytes": 260014080,
+            "wall_seconds": 0.27481950001674704,
+            "user_cpu_seconds": 0.45272799999999996,
+            "system_cpu_seconds": 0.050738,
+            "major_faults": 0,
+            "minor_faults": 17136
+          },
+          {
+            "peak_rss_bytes": 260046848,
+            "wall_seconds": 0.2807744169840589,
+            "user_cpu_seconds": 0.460902,
+            "system_cpu_seconds": 0.051897,
+            "major_faults": 0,
+            "minor_faults": 17145
+          },
+          {
+            "peak_rss_bytes": 261718016,
+            "wall_seconds": 0.2939040000201203,
+            "user_cpu_seconds": 0.462441,
+            "system_cpu_seconds": 0.057295,
+            "major_faults": 0,
+            "minor_faults": 17243
+          },
+          {
+            "peak_rss_bytes": 260489216,
+            "wall_seconds": 0.290602958004456,
+            "user_cpu_seconds": 0.464949,
+            "system_cpu_seconds": 0.056687999999999995,
+            "major_faults": 23,
+            "minor_faults": 17141
+          },
+          {
+            "peak_rss_bytes": 261144576,
+            "wall_seconds": 0.3354265829839278,
+            "user_cpu_seconds": 0.494247,
+            "system_cpu_seconds": 0.064833,
+            "major_faults": 0,
+            "minor_faults": 17209
+          },
+          {
+            "peak_rss_bytes": 262242304,
+            "wall_seconds": 0.561531165993074,
+            "user_cpu_seconds": 0.605538,
+            "system_cpu_seconds": 0.08372099999999999,
+            "major_faults": 3,
+            "minor_faults": 17275
+          },
+          {
+            "peak_rss_bytes": 262946816,
+            "wall_seconds": 0.3225072080094833,
+            "user_cpu_seconds": 0.51494,
+            "system_cpu_seconds": 0.055916999999999994,
+            "major_faults": 0,
+            "minor_faults": 17317
+          },
+          {
+            "peak_rss_bytes": 260096000,
+            "wall_seconds": 0.3221085419936571,
+            "user_cpu_seconds": 0.54258,
+            "system_cpu_seconds": 0.047886,
+            "major_faults": 0,
+            "minor_faults": 16702
+          },
+          {
+            "peak_rss_bytes": 260980736,
+            "wall_seconds": 0.2954560409998521,
+            "user_cpu_seconds": 0.49984799999999996,
+            "system_cpu_seconds": 0.048499999999999995,
+            "major_faults": 0,
+            "minor_faults": 17192
+          },
+          {
+            "peak_rss_bytes": 260112384,
+            "wall_seconds": 0.2724763340083882,
+            "user_cpu_seconds": 0.453526,
+            "system_cpu_seconds": 0.046487,
+            "major_faults": 0,
+            "minor_faults": 17151
+          },
+          {
+            "peak_rss_bytes": 261505024,
+            "wall_seconds": 0.3452836250071414,
+            "user_cpu_seconds": 0.551956,
+            "system_cpu_seconds": 0.064761,
+            "major_faults": 0,
+            "minor_faults": 17229
+          },
+          {
+            "peak_rss_bytes": 261193728,
+            "wall_seconds": 0.3009087910177186,
+            "user_cpu_seconds": 0.501551,
+            "system_cpu_seconds": 0.057645999999999996,
+            "major_faults": 0,
+            "minor_faults": 17222
+          },
+          {
+            "peak_rss_bytes": 261537792,
+            "wall_seconds": 0.2922662500059232,
+            "user_cpu_seconds": 0.468781,
+            "system_cpu_seconds": 0.058470999999999995,
+            "major_faults": 0,
+            "minor_faults": 17230
+          },
+          {
+            "peak_rss_bytes": 260014080,
+            "wall_seconds": 0.27924970898311585,
+            "user_cpu_seconds": 0.45704999999999996,
+            "system_cpu_seconds": 0.052898999999999995,
+            "major_faults": 8,
+            "minor_faults": 17120
+          },
+          {
+            "peak_rss_bytes": 260915200,
+            "wall_seconds": 0.2783667919866275,
+            "user_cpu_seconds": 0.45728599999999997,
+            "system_cpu_seconds": 0.053753999999999996,
+            "major_faults": 0,
+            "minor_faults": 17189
+          },
+          {
+            "peak_rss_bytes": 262160384,
+            "wall_seconds": 0.2861235000018496,
+            "user_cpu_seconds": 0.472583,
+            "system_cpu_seconds": 0.057954,
+            "major_faults": 23,
+            "minor_faults": 17251
+          }
+        ],
+        "rust": [
+          {
+            "peak_rss_bytes": 3997696,
+            "wall_seconds": 0.1294132909970358,
+            "user_cpu_seconds": 0.12164399999999999,
+            "system_cpu_seconds": 0.005644,
+            "major_faults": 0,
+            "minor_faults": 519
+          },
+          {
+            "peak_rss_bytes": 3964928,
+            "wall_seconds": 0.12970308397780173,
+            "user_cpu_seconds": 0.12148099999999999,
+            "system_cpu_seconds": 0.005765,
+            "major_faults": 0,
+            "minor_faults": 522
+          },
+          {
+            "peak_rss_bytes": 3997696,
+            "wall_seconds": 0.13020433401106857,
+            "user_cpu_seconds": 0.121726,
+            "system_cpu_seconds": 0.005567,
+            "major_faults": 0,
+            "minor_faults": 517
+          },
+          {
+            "peak_rss_bytes": 3883008,
+            "wall_seconds": 0.12942191597539932,
+            "user_cpu_seconds": 0.121322,
+            "system_cpu_seconds": 0.005301999999999999,
+            "major_faults": 0,
+            "minor_faults": 505
+          },
+          {
+            "peak_rss_bytes": 4030464,
+            "wall_seconds": 0.13027245801640674,
+            "user_cpu_seconds": 0.121904,
+            "system_cpu_seconds": 0.005510999999999999,
+            "major_faults": 0,
+            "minor_faults": 524
+          },
+          {
+            "peak_rss_bytes": 4046848,
+            "wall_seconds": 0.1305671670124866,
+            "user_cpu_seconds": 0.121476,
+            "system_cpu_seconds": 0.006343,
+            "major_faults": 0,
+            "minor_faults": 522
+          },
+          {
+            "peak_rss_bytes": 3883008,
+            "wall_seconds": 0.12980554101523012,
+            "user_cpu_seconds": 0.12142,
+            "system_cpu_seconds": 0.0053089999999999995,
+            "major_faults": 0,
+            "minor_faults": 509
+          },
+          {
+            "peak_rss_bytes": 4096000,
+            "wall_seconds": 0.13138295800308697,
+            "user_cpu_seconds": 0.12161699999999999,
+            "system_cpu_seconds": 0.005893,
+            "major_faults": 0,
+            "minor_faults": 518
+          },
+          {
+            "peak_rss_bytes": 3997696,
+            "wall_seconds": 0.13140216600731947,
+            "user_cpu_seconds": 0.12175899999999999,
+            "system_cpu_seconds": 0.006501,
+            "major_faults": 1,
+            "minor_faults": 516
+          },
+          {
+            "peak_rss_bytes": 4030464,
+            "wall_seconds": 0.13420995901105925,
+            "user_cpu_seconds": 0.122596,
+            "system_cpu_seconds": 0.0068969999999999995,
+            "major_faults": 0,
+            "minor_faults": 523
+          },
+          {
+            "peak_rss_bytes": 3997696,
+            "wall_seconds": 0.1432387089880649,
+            "user_cpu_seconds": 0.13036599999999998,
+            "system_cpu_seconds": 0.006415,
+            "major_faults": 0,
+            "minor_faults": 512
+          },
+          {
+            "peak_rss_bytes": 4096000,
+            "wall_seconds": 0.14156837499467656,
+            "user_cpu_seconds": 0.129179,
+            "system_cpu_seconds": 0.005776,
+            "major_faults": 0,
+            "minor_faults": 521
+          },
+          {
+            "peak_rss_bytes": 4014080,
+            "wall_seconds": 0.13841091698850505,
+            "user_cpu_seconds": 0.128688,
+            "system_cpu_seconds": 0.006052999999999999,
+            "major_faults": 0,
+            "minor_faults": 518
+          },
+          {
+            "peak_rss_bytes": 4096000,
+            "wall_seconds": 0.14040787500562146,
+            "user_cpu_seconds": 0.13211,
+            "system_cpu_seconds": 0.005422,
+            "major_faults": 0,
+            "minor_faults": 521
+          },
+          {
+            "peak_rss_bytes": 4014080,
+            "wall_seconds": 0.1298193750262726,
+            "user_cpu_seconds": 0.122223,
+            "system_cpu_seconds": 0.005127,
+            "major_faults": 0,
+            "minor_faults": 513
+          },
+          {
+            "peak_rss_bytes": 4030464,
+            "wall_seconds": 0.1303173339983914,
+            "user_cpu_seconds": 0.12271599999999999,
+            "system_cpu_seconds": 0.005365,
+            "major_faults": 0,
+            "minor_faults": 514
+          },
+          {
+            "peak_rss_bytes": 3932160,
+            "wall_seconds": 0.13335233301040716,
+            "user_cpu_seconds": 0.123748,
+            "system_cpu_seconds": 0.006144999999999999,
+            "major_faults": 0,
+            "minor_faults": 513
+          },
+          {
+            "peak_rss_bytes": 3915776,
+            "wall_seconds": 0.1313782499928493,
+            "user_cpu_seconds": 0.123141,
+            "system_cpu_seconds": 0.005526,
+            "major_faults": 0,
+            "minor_faults": 510
+          },
+          {
+            "peak_rss_bytes": 4030464,
+            "wall_seconds": 0.12902887500240467,
+            "user_cpu_seconds": 0.121555,
+            "system_cpu_seconds": 0.005513,
+            "major_faults": 0,
+            "minor_faults": 514
+          },
+          {
+            "peak_rss_bytes": 4063232,
+            "wall_seconds": 0.13094154198188335,
+            "user_cpu_seconds": 0.122788,
+            "system_cpu_seconds": 0.00596,
+            "major_faults": 0,
+            "minor_faults": 516
+          },
+          {
+            "peak_rss_bytes": 3883008,
+            "wall_seconds": 0.1324808329809457,
+            "user_cpu_seconds": 0.12343599999999999,
+            "system_cpu_seconds": 0.0062309999999999996,
+            "major_faults": 1,
+            "minor_faults": 507
+          }
+        ]
+      },
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/v02-benchmark-heatmap-low/java-baseline.jar",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "work/fixtures/2000000-samples.jfr",
+          "work/v02-benchmark-heatmap-low/2000000-samples.java.heatmap"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/v02-benchmark-heatmap-low/jfrconv-measured",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "work/fixtures/2000000-samples.jfr",
+          "work/v02-benchmark-heatmap-low/2000000-samples.rust.heatmap"
+        ]
+      },
+      "first_fresh_process": {
+        "java": {
+          "peak_rss_bytes": 260423680,
+          "wall_seconds": 0.4001563749916386,
+          "user_cpu_seconds": 0.505872,
+          "system_cpu_seconds": 0.071765,
+          "major_faults": 1715,
+          "minor_faults": 15451
+        },
+        "rust": {
+          "peak_rss_bytes": 4177920,
+          "wall_seconds": 0.5643075419939123,
+          "user_cpu_seconds": 0.125045,
+          "system_cpu_seconds": 0.009120999999999999,
+          "major_faults": 0,
+          "minor_faults": 528
+        }
+      },
+      "warmup_runs": {
+        "java": [
+          {
+            "peak_rss_bytes": 261439488,
+            "wall_seconds": 0.27824012501514517,
+            "user_cpu_seconds": 0.45797299999999996,
+            "system_cpu_seconds": 0.051564,
+            "major_faults": 0,
+            "minor_faults": 17222
+          }
+        ],
+        "rust": [
+          {
+            "peak_rss_bytes": 3964928,
+            "wall_seconds": 0.13314141699811444,
+            "user_cpu_seconds": 0.122902,
+            "system_cpu_seconds": 0.00637,
+            "major_faults": 0,
+            "minor_faults": 512
+          }
+        ]
+      },
+      "execution_order": [
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ],
+        [
+          "rust",
+          "java"
+        ],
+        [
+          "java",
+          "rust"
+        ]
+      ],
+      "output_matches": true,
+      "java": {
+        "median_peak_rss_bytes": 260915200,
+        "p95_peak_rss_bytes": 262242304,
+        "max_peak_rss_bytes": 262946816,
+        "median_wall_seconds": 0.2903773750003893,
+        "p95_wall_seconds": 0.3452836250071414,
+        "max_wall_seconds": 0.561531165993074
+      },
+      "rust": {
+        "median_peak_rss_bytes": 4014080,
+        "p95_peak_rss_bytes": 4096000,
+        "max_peak_rss_bytes": 4096000,
+        "median_wall_seconds": 0.13094154198188335,
+        "p95_wall_seconds": 0.14156837499467656,
+        "max_wall_seconds": 0.1432387089880649
+      },
+      "rss_reduction_percent": 98.46153846153847,
+      "latency_p50_speedup_ratio": 2.2176107796299283,
+      "latency_p95_speedup_ratio": 2.4389884041554137
+    }
+  ]
+}

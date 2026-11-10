@@ -1,0 +1,176 @@
+{
+  "description": "Actual browser screenshot captured by parent/root through CUA, comparing Java4.1 and frozen Rust0.2.1 allocation graphs with identical seeded Math.random. Production assets unchanged.",
+  "candidate_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "screenshot": "comparison.jpg",
+  "screenshot_sha256": "03270b44b3940cf5dfd12eb58fa09949fc0ec676dc767af7630758aae8a74846",
+  "fixture": "tests/fixtures/mixed.jfr",
+  "converter_flags": [
+    "--alloc"
+  ],
+  "renderer_seed": 4321705,
+  "renderer_report_source": "work/ui-parity/visual-final/report.json",
+  "report_cases": [
+    {
+      "case": "pair",
+      "format": "html",
+      "files": {
+        "java": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-alloc/java.html",
+        "rust": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-alloc/rust.html"
+      },
+      "input_html_sha256": {
+        "java": "22a444a69997b7899f7f317b29e98fd3e5390962a38d1018b8e11fe85b23e65a",
+        "rust": "8b608bca9a3e38c1b81d494b8a7aefe8b7d87bcc27d0e84ca61a5042c687835a"
+      },
+      "seeded": {
+        "java": "pair/seeded/java.html",
+        "rust": "pair/seeded/rust.html"
+      },
+      "checks_per_implementation": 17,
+      "java_checks": {
+        "initial_canvas_has_draw_calls": true,
+        "initial_highlight_obeys_flag": true,
+        "tooltip_contains_frame_and_sample_count": true,
+        "hover_overlay_and_status_visible": true,
+        "double_click_selects_tooltip": true,
+        "zoom_selects_nonroot_frame": true,
+        "invert_changes_orientation": true,
+        "search_calls_original_prompt": true,
+        "search_marks_visible_frames": true,
+        "search_shows_positive_match_percentage": true,
+        "next_match_navigates": true,
+        "previous_match_wraps_navigation": true,
+        "escape_clears_search": true,
+        "ctrl_f_calls_prompt_and_prevents_browser_find": true,
+        "reset_clears_search": true,
+        "cancel_preserves_clear_state": true,
+        "mouseout_hides_tooltip": true
+      },
+      "rust_checks": {
+        "initial_canvas_has_draw_calls": true,
+        "initial_highlight_obeys_flag": true,
+        "tooltip_contains_frame_and_sample_count": true,
+        "hover_overlay_and_status_visible": true,
+        "double_click_selects_tooltip": true,
+        "zoom_selects_nonroot_frame": true,
+        "invert_changes_orientation": true,
+        "search_calls_original_prompt": true,
+        "search_marks_visible_frames": true,
+        "search_shows_positive_match_percentage": true,
+        "next_match_navigates": true,
+        "previous_match_wraps_navigation": true,
+        "escape_clears_search": true,
+        "ctrl_f_calls_prompt_and_prevents_browser_find": true,
+        "reset_clears_search": true,
+        "cancel_preserves_clear_state": true,
+        "mouseout_hides_tooltip": true
+      },
+      "phases": [
+        {
+          "phase": "initial",
+          "equal": true,
+          "java_draw_calls": 19,
+          "rust_draw_calls": 19,
+          "java_digest": "8495868020edd2f130f47b088b2cb84e2cddff80b82c031291c458b3d2da13af",
+          "rust_digest": "8495868020edd2f130f47b088b2cb84e2cddff80b82c031291c458b3d2da13af"
+        },
+        {
+          "phase": "hover",
+          "equal": true,
+          "java_draw_calls": 0,
+          "rust_draw_calls": 0,
+          "java_digest": "e77da6979e712f95f84665e28be593a84bed28d687ea91d97ae0e61b79637ff2",
+          "rust_digest": "e77da6979e712f95f84665e28be593a84bed28d687ea91d97ae0e61b79637ff2"
+        },
+        {
+          "phase": "select-tooltip",
+          "equal": true,
+          "java_draw_calls": 0,
+          "rust_draw_calls": 0,
+          "java_digest": "7ded708042da10491c73a6152ed47f9516b51db1ad33d68ae391cbf15cbd17f9",
+          "rust_digest": "7ded708042da10491c73a6152ed47f9516b51db1ad33d68ae391cbf15cbd17f9"
+        },
+        {
+          "phase": "zoom",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "b1e125e84a7fddcdab010f00743dc666b8e4992bd55483d16f47d74536e7a320",
+          "rust_digest": "b1e125e84a7fddcdab010f00743dc666b8e4992bd55483d16f47d74536e7a320"
+        },
+        {
+          "phase": "invert",
+          "equal": true,
+          "java_draw_calls": 19,
+          "rust_draw_calls": 19,
+          "java_digest": "8f326dca01ae7c9e695557a376713cf73ed7b9de3699c498b726edf3058f6f6d",
+          "rust_digest": "8f326dca01ae7c9e695557a376713cf73ed7b9de3699c498b726edf3058f6f6d"
+        },
+        {
+          "phase": "search-button",
+          "equal": true,
+          "java_draw_calls": 19,
+          "rust_draw_calls": 19,
+          "java_digest": "1c78b6ce7dfb8f38e7122ea1abe55183f5fe3b57e6e58a8569aaf11defbbeaf6",
+          "rust_digest": "1c78b6ce7dfb8f38e7122ea1abe55183f5fe3b57e6e58a8569aaf11defbbeaf6"
+        },
+        {
+          "phase": "next-match",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "a031403744e0f596835efd9aa8691e952a5ddd98a2415f5ca3ab3b6788968414",
+          "rust_digest": "a031403744e0f596835efd9aa8691e952a5ddd98a2415f5ca3ab3b6788968414"
+        },
+        {
+          "phase": "previous-match",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "b1bb8e0f1bb6d9c3257e068bf8e2d844397556f53cc0552a342d3ec080079534",
+          "rust_digest": "b1bb8e0f1bb6d9c3257e068bf8e2d844397556f53cc0552a342d3ec080079534"
+        },
+        {
+          "phase": "escape-clear",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "3ba924412b76b21190793b751253fa10ebcac651bbe666b7c481100ecbbe1cb6",
+          "rust_digest": "3ba924412b76b21190793b751253fa10ebcac651bbe666b7c481100ecbbe1cb6"
+        },
+        {
+          "phase": "ctrl-f",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "7a1b8a0544561ad51dc567df06ccc861c0d7c6f46faa24cb58236dbfab213164",
+          "rust_digest": "7a1b8a0544561ad51dc567df06ccc861c0d7c6f46faa24cb58236dbfab213164"
+        },
+        {
+          "phase": "reset-button",
+          "equal": true,
+          "java_draw_calls": 13,
+          "rust_draw_calls": 13,
+          "java_digest": "ebb49b17f59938fbf1c3e48e81b64ff0570dd98c14783c03d592bc22b05401a7",
+          "rust_digest": "ebb49b17f59938fbf1c3e48e81b64ff0570dd98c14783c03d592bc22b05401a7"
+        },
+        {
+          "phase": "search-cancel",
+          "equal": true,
+          "java_draw_calls": 0,
+          "rust_draw_calls": 0,
+          "java_digest": "ab06619b960fcf52be82a6c905f7cf2ced9bf666abe15fda3d739d79238e5470",
+          "rust_digest": "ab06619b960fcf52be82a6c905f7cf2ced9bf666abe15fda3d739d79238e5470"
+        },
+        {
+          "phase": "mouseout",
+          "equal": true,
+          "java_draw_calls": 0,
+          "rust_draw_calls": 0,
+          "java_digest": "ab9763f8a5cc1862314154a3a5a85bb7bbcbe7cf424f464fbff04aa2ca19d421",
+          "rust_digest": "ab9763f8a5cc1862314154a3a5a85bb7bbcbe7cf424f464fbff04aa2ca19d421"
+        }
+      ],
+      "all_phases_identical": true
+    }
+  ]
+}

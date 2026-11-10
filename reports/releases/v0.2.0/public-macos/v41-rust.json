@@ -1,0 +1,79 @@
+{
+  "revision": "5930966a92860f6e5d2d89ab6faab5815720bad9",
+  "suite": "v4.1",
+  "transport_bridge": true,
+  "assertion_files_unchanged": true,
+  "command": [
+    "/opt/homebrew/opt/openjdk@21/bin/java",
+    "-ea",
+    "-Djava.library.path=build/test/lib",
+    "-DthreadCount=1",
+    "-DretryCount=0",
+    "-DlogDir=/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/upstream-macos/v41-rust/public-test-results/profiles",
+    "-cp",
+    "build/test.jar:build/jar/*:build/lib/*:test/deps/*:test/gen/*",
+    "one.profiler.test.Runner",
+    "JfrTests.regularPeak",
+    "JfrTests.ttsp",
+    "StackwalkerTests",
+    "NativememTests.ldpreload"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 15.986521332990378,
+  "counts": {
+    "PASS": 8,
+    "SKIP_CONFIG_MISMATCH": 1
+  },
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "JfrTests.regularPeak",
+      "seconds": 7.109
+    },
+    {
+      "status": "PASS",
+      "test": "JfrTests.ttsp (agentArgs: start,event=cpu,ttsp,interval=1ms,jfr,file=%f)",
+      "seconds": 3.31
+    },
+    {
+      "status": "SKIP_CONFIG_MISMATCH",
+      "test": "NativememTests.ldpreload (args: once)",
+      "seconds": 0.0
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.deepStack/VM (args: deepFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)",
+      "seconds": 0.916
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.deepStack/VMX (args: deepFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)",
+      "seconds": 0.917
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.largeFrame/VM (args: largeFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)",
+      "seconds": 0.906
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.largeFrame/VMX (args: largeFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)",
+      "seconds": 0.909
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.normalStackVM (args: leafFrame) (agentArgs: start,event=cpu,cstack=vm,file=%f.jfr)",
+      "seconds": 0.908
+    },
+    {
+      "status": "PASS",
+      "test": "StackwalkerTests.normalStackVMX (args: leafFrame) (agentArgs: start,event=cpu,cstack=vmx,file=%f.jfr)",
+      "seconds": 0.906
+    }
+  ],
+  "platform": "Darwin arm64",
+  "java_version": "openjdk version \"21.0.7\" 2025-04-15\nOpenJDK Runtime Environment Homebrew (build 21.0.7)\nOpenJDK 64-Bit Server VM Homebrew (build 21.0.7, mixed mode, sharing)",
+  "rust_binary": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/final-candidate/jfrconv",
+  "adapter": "Only Output.convertJfrToCollapsed, static JfrToFlame/JfrToHeatmap.convert and Main.main transport entry points are redirected. Published test assertions are byte-for-byte unchanged. /dev/null and all actual requested output paths are passed directly to the native CLI.",
+  "rust_binary_sha256": "d55d0e0b66f4b9f577947ce30cd3a9789e0efd9a30c5d729906ade9c16a7f1ff"
+}

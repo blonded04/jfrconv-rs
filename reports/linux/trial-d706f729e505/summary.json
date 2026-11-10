@@ -1,0 +1,60 @@
+{
+  "suite": "Published async-profiler4.1 Linux-only NativememTests.ldpreload + Linux release memory-limit tests",
+  "upstream_revision": "5930966a92860f6e5d2d89ab6faab5815720bad9",
+  "published_assertions_unchanged": true,
+  "java": {
+    "counts": {
+      "PASS": 1
+    },
+    "seconds": 1.0639053750201128
+  },
+  "rust": {
+    "counts": {
+      "PASS": 1
+    },
+    "seconds": 0.9086908749886788,
+    "binary_sha256": "d706f729e505f913f93671c9b977c31747471d19aaa08454baa1f6ac0eb88ee9"
+  },
+  "memory": {
+    "passed": 7,
+    "failed": 0,
+    "command": "CARGO_HOME=/work/cargo CARGO_TARGET_DIR=/work/linux-target cargo test --release --locked --offline --test memory_limits -- --nocapture --test-threads=1",
+    "linux_only_address_space_case": "restrictive_address_space_limit_exits_cleanly_instead_of_aborting: PASS (--max-rss4M exits75 and preserves existing output)"
+  },
+  "environment": {
+    "platform": "Linux aarch64",
+    "java": "openjdk version \"21.0.11\" 2026-04-21 LTS\nOpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing)",
+    "rustc": "1.93.1 (01f6ddf75 2026-02-11), Ubuntu package",
+    "compiler": "GCC15",
+    "docker_image": "eclipse-temurin:21-jdk",
+    "security": "Default Docker capabilities and seccomp; no privileged flag. Task-only bind mounts; compiler/system copies in exec,nosuid,nodev tmpfs; container --rm completed exit0. User images untouched."
+  },
+  "source_snapshot_sha256": {
+    "Cargo.toml": "0f99be28653d321d2c9ae3ebcb84a00d7609bdb40127c3a2d05ff6d0fc7c0879",
+    "Cargo.lock": "fedba07b759657233775e71614a80ec2f057e90b7e3ed8f1880b595789bbc676",
+    "src/args.rs": "1d6891ae58c9caa97b036ea6862b91b18f6aad4eeb8e9396fc2ee0ea53659d13",
+    "src/convert.rs": "bff1a9469e0bceca6bc49953b9806c4cfc42a4167a48a0a0cf6a690d41e58dad",
+    "src/export.rs": "25d8d5497f44605a65dea11c4063997c1dca097a58e696df2c7948e636000e05",
+    "src/heatmap.rs": "b077cad0590c086100e1d0d28ab1a5a1f61ff955a20cd25f193525a667c9e8f8",
+    "src/heatmap_sort.rs": "c3d5c527bf74da85061b78b2449a208a0c8cbbf93aaeda7e7e7b99c11437571e",
+    "src/input.rs": "f6de69b803e86cb6207e5e5976f0e479ecd13bc6018e87eeeef28b85766c2c24",
+    "src/jfr.rs": "6a8de986fce3492f3363d3afddff694361ae19107df18dbd5b56ade74a366af5",
+    "src/leak_sort.rs": "168b68ec12fb8d2143fdfdb0f716aac20fc0e4cc3f5027d9734e4c7a71fb24ef",
+    "src/main.rs": "bc74442ba9df8a672b764cd748b7f08884972160c4666ddb76dda807bc82c541",
+    "src/memory.rs": "0ad8bf9a641a5b4a2cb4530f2c4c56d2cbe8a2348c9032a3be25df3accdf3c95",
+    "src/model.rs": "833485fb989557b23d054ed79d315ac5bcc247b1aac997edd12afa5823db2029",
+    "src/proto.rs": "41c9b8efca93345c659388fafc4070e18e25bb57bd7353a545fc777441dda056",
+    "assets/flame-diff.html": "4c34c556a1b586fa8b2446351011dca496ca32dfeff06a36fd8bc5e7d0325bdf",
+    "assets/flame.html": "4e7b51b631e857f0c8ae832410adfa108ec67b3f5eed32be09acd025505c7407",
+    "assets/heatmap.html": "12e3e1907300dad8ae5a956ddce22e0322a02a76ed3603332a606a1fc6cf564b"
+  },
+  "snapshot_differences_from_current_source": [
+    "src/export.rs",
+    "src/proto.rs"
+  ],
+  "notes": [
+    "Java and Rust ran the same published assertions; only converter transport bridges differ.",
+    "Linux binary is a test build against Ubuntu26.04/glibc2.43, not a portable Linux release artifact."
+  ],
+  "source_comparison_note": "At initial report packaging, all src/assets/Cargo files matched the then-current source, including the Arc method-name cache and dot-filename fixes. The later OTLP-only exporter/protobuf optimization changed src/export.rs and src/proto.rs. This older Linux binary is not labeled as the final Mac candidate."
+}

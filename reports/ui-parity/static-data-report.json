@@ -1,0 +1,1121 @@
+{
+  "rust_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "java_jar_sha256": "2464b34abd47243941d81d53110591d66d7db3b3fae46c79fc85057eeddda19b",
+  "original_flame_template_sha256": "4e7b51b631e857f0c8ae832410adfa108ec67b3f5eed32be09acd025505c7407",
+  "original_heatmap_template_sha256": "12e3e1907300dad8ae5a956ddce22e0322a02a76ed3603332a606a1fc6cf564b",
+  "cases": [
+    {
+      "case": "mixed-cpu",
+      "input": "outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+      "input_sha256": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+      "flags": [
+        "--cpu"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-cpu/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-cpu/rust.html"
+        ]
+      },
+      "files": {
+        "java": "mixed-cpu/java.html",
+        "rust": "mixed-cpu/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "48",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "3",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "48",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "3",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 6,
+      "profile_stacks": 4,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 7,
+        "rust": 7
+      }
+    },
+    {
+      "case": "mixed-alloc",
+      "input": "outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+      "input_sha256": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+      "flags": [
+        "--alloc"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--alloc",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-alloc/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--alloc",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-alloc/rust.html"
+        ]
+      },
+      "files": {
+        "java": "mixed-alloc/java.html",
+        "rust": "mixed-alloc/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "64",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "4",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "64",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "4",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 6,
+      "profile_stacks": 4,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 9,
+        "rust": 9
+      }
+    },
+    {
+      "case": "mixed-reverse",
+      "input": "outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+      "input_sha256": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+      "flags": [
+        "--cpu",
+        "--reverse"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-reverse/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-reverse/rust.html"
+        ]
+      },
+      "files": {
+        "java": "mixed-reverse/java.html",
+        "rust": "mixed-reverse/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "48",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "3",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "48",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "3",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 6,
+      "profile_stacks": 4,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 8,
+        "rust": 8
+      }
+    },
+    {
+      "case": "mixed-heatmap",
+      "input": "outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+      "input_sha256": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+      "flags": [
+        "--cpu"
+      ],
+      "format": "heatmap",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-heatmap/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/outputs/jfrconv-rs/tests/fixtures/mixed.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/mixed-heatmap/rust.html"
+        ]
+      },
+      "files": {
+        "java": "mixed-heatmap/java.html",
+        "rust": "mixed-heatmap/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "title": "Flame Graph",
+          "startMs": "1700000000000"
+        },
+        "rust": {
+          "title": "Flame Graph",
+          "startMs": "1700000000000"
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "decoded_heatmap_matches": true,
+      "decoded_heatmap": {
+        "java": {
+          "startMs": 1700000000000,
+          "blocks": 51,
+          "samples": 6,
+          "stacks": 4,
+          "digest": "5f35469f8e1c62345889d489a03aed2cae94e4028a2baeb9c3b67c8dc7cc63e3"
+        },
+        "rust": {
+          "startMs": 1700000000000,
+          "blocks": 51,
+          "samples": 6,
+          "stacks": 4,
+          "digest": "5f35469f8e1c62345889d489a03aed2cae94e4028a2baeb9c3b67c8dc7cc63e3"
+        }
+      }
+    },
+    {
+      "case": "ap-cpu",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-cpu/java.html",
+        "rust": "ap-cpu/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 1076,
+        "rust": 1076
+      }
+    },
+    {
+      "case": "ap-alloc",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--alloc"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--alloc",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-alloc/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--alloc",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-alloc/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-alloc/java.html",
+        "rust": "ap-alloc/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "592",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "37",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "592",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "37",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 25935,
+      "profile_stacks": 7,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 126,
+        "rust": 126
+      }
+    },
+    {
+      "case": "ap-reverse",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu",
+        "--reverse"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-reverse/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-reverse/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-reverse/java.html",
+        "rust": "ap-reverse/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 3718,
+        "rust": 3718
+      }
+    },
+    {
+      "case": "ap-inverted",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu",
+        "--inverted"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--inverted",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-inverted/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--inverted",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-inverted/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-inverted/java.html",
+        "rust": "ap-inverted/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 1076,
+        "rust": 1076
+      }
+    },
+    {
+      "case": "ap-heatmap",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu"
+      ],
+      "format": "heatmap",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-heatmap/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-heatmap/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-heatmap/java.html",
+        "rust": "ap-heatmap/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "title": "Flame Graph",
+          "startMs": "1794322293577"
+        },
+        "rust": {
+          "title": "Flame Graph",
+          "startMs": "1794322293577"
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "decoded_heatmap_matches": true,
+      "decoded_heatmap": {
+        "java": {
+          "startMs": 1794322293577,
+          "blocks": 101,
+          "samples": 5488,
+          "stacks": 246,
+          "digest": "1ea0fcb4810508637faee43ec64c85094a6a2001fea27e95052fbe8b210337fa"
+        },
+        "rust": {
+          "startMs": 1794322293577,
+          "blocks": 101,
+          "samples": 5488,
+          "stacks": 246,
+          "digest": "1ea0fcb4810508637faee43ec64c85094a6a2001fea27e95052fbe8b210337fa"
+        }
+      }
+    },
+    {
+      "case": "ap-heatmap-alloc",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--alloc"
+      ],
+      "format": "heatmap",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--alloc",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-heatmap-alloc/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--alloc",
+          "-o",
+          "heatmap",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-heatmap-alloc/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-heatmap-alloc/java.html",
+        "rust": "ap-heatmap-alloc/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "title": "Flame Graph",
+          "startMs": "1794322293577"
+        },
+        "rust": {
+          "title": "Flame Graph",
+          "startMs": "1794322293577"
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "decoded_heatmap_matches": true,
+      "decoded_heatmap": {
+        "java": {
+          "startMs": 1794322293577,
+          "blocks": 101,
+          "samples": 25935,
+          "stacks": 8,
+          "digest": "cac2ab73255cbe8f39a996c7489e1e12267e703e8218c66a95f1e7a6f83a20e2"
+        },
+        "rust": {
+          "startMs": 1794322293577,
+          "blocks": 101,
+          "samples": 25935,
+          "stacks": 8,
+          "digest": "cac2ab73255cbe8f39a996c7489e1e12267e703e8218c66a95f1e7a6f83a20e2"
+        }
+      }
+    },
+    {
+      "case": "ap-title-highlight",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu",
+        "--title",
+        "CPU UI parity",
+        "--highlight",
+        "RecordingWorkload"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--title",
+          "CPU UI parity",
+          "--highlight",
+          "RecordingWorkload",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-title-highlight/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--title",
+          "CPU UI parity",
+          "--highlight",
+          "RecordingWorkload",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-title-highlight/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-title-highlight/java.html",
+        "rust": "ap-title-highlight/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "CPU UI parity",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": "'RecordingWorkload'"
+        },
+        "rust": {
+          "height": "784",
+          "title": "CPU UI parity",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": "'RecordingWorkload'"
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 1076,
+        "rust": 1076
+      }
+    },
+    {
+      "case": "ap-filtered",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu",
+        "--include",
+        ".*RecordingWorkload.*",
+        "--exclude",
+        ".*park.*"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--include",
+          ".*RecordingWorkload.*",
+          "--exclude",
+          ".*park.*",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-filtered/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--include",
+          ".*RecordingWorkload.*",
+          "--exclude",
+          ".*park.*",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-filtered/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-filtered/java.html",
+        "rust": "ap-filtered/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5389,
+      "profile_stacks": 174,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 727,
+        "rust": 727
+      }
+    },
+    {
+      "case": "ap-title-literal",
+      "input": "work/fixtures/ap41.jfr",
+      "input_sha256": "d1e26c9ac284212f6ab36f25f6ccbbe0a60876f287159f8aaf9fb3da51150559",
+      "flags": [
+        "--cpu",
+        "--title",
+        "CPU <UI> & parity"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--cpu",
+          "--title",
+          "CPU <UI> & parity",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-title-literal/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--cpu",
+          "--title",
+          "CPU <UI> & parity",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/fixtures/ap41.jfr",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-title-literal/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-title-literal/java.html",
+        "rust": "ap-title-literal/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "CPU <UI> & parity",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "CPU <UI> & parity",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 1076,
+        "rust": 1076
+      }
+    },
+    {
+      "case": "collapsed-skip-height",
+      "input": "work/ui-parity/height-skip.collapsed",
+      "input_sha256": "64b6f7a1ddb6dd8993c1a0616fd855279f91cc711c16cbb5815ebd4a74177ab1",
+      "flags": [
+        "--skip",
+        "2"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/height-skip.collapsed",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/collapsed-skip-height/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/height-skip.collapsed",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/collapsed-skip-height/rust.html"
+        ]
+      },
+      "files": {
+        "java": "collapsed-skip-height/java.html",
+        "rust": "collapsed-skip-height/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "64",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "4",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "64",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "4",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 1,
+      "profile_stacks": 1,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 2,
+        "rust": 2
+      }
+    },
+    {
+      "case": "ap-html-skip",
+      "input": "work/ui-parity/ap-cpu/java.html",
+      "input_sha256": "3f030e2ee1afaa60c86a00e110121861aadf31f6d35297a1854d8af365597967",
+      "flags": [
+        "--skip",
+        "2"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-skip/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-skip/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-html-skip/java.html",
+        "rust": "ap-html-skip/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 1076,
+        "rust": 1076
+      }
+    },
+    {
+      "case": "ap-html-reverse-skip",
+      "input": "work/ui-parity/ap-cpu/java.html",
+      "input_sha256": "3f030e2ee1afaa60c86a00e110121861aadf31f6d35297a1854d8af365597967",
+      "flags": [
+        "--reverse",
+        "--skip",
+        "2"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--reverse",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-reverse-skip/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--reverse",
+          "--skip",
+          "2",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-reverse-skip/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-html-reverse-skip/java.html",
+        "rust": "ap-html-reverse-skip/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5487,
+      "profile_stacks": 232,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 3254,
+        "rust": 3254
+      }
+    },
+    {
+      "case": "ap-html-reverse",
+      "input": "work/ui-parity/ap-cpu/java.html",
+      "input_sha256": "3f030e2ee1afaa60c86a00e110121861aadf31f6d35297a1854d8af365597967",
+      "flags": [
+        "--reverse"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-reverse/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--reverse",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-reverse/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-html-reverse/java.html",
+        "rust": "ap-html-reverse/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "true",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5488,
+      "profile_stacks": 233,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 3718,
+        "rust": 3718
+      }
+    },
+    {
+      "case": "ap-html-filter",
+      "input": "work/ui-parity/ap-cpu/java.html",
+      "input_sha256": "3f030e2ee1afaa60c86a00e110121861aadf31f6d35297a1854d8af365597967",
+      "flags": [
+        "--include",
+        ".*RecordingWorkload.*",
+        "--exclude",
+        ".*park.*"
+      ],
+      "format": "html",
+      "commands": {
+        "java": [
+          "java",
+          "-jar",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/async-profiler-4.1/build/jar/jfr-converter.jar",
+          "--include",
+          ".*RecordingWorkload.*",
+          "--exclude",
+          ".*park.*",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-filter/java.html"
+        ],
+        "rust": [
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui021-final/jfrconv",
+          "--include",
+          ".*RecordingWorkload.*",
+          "--exclude",
+          ".*park.*",
+          "-o",
+          "html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-cpu/java.html",
+          "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-parity/ap-html-filter/rust.html"
+        ]
+      },
+      "files": {
+        "java": "ap-html-filter/java.html",
+        "rust": "ap-html-filter/rust.html"
+      },
+      "substitutions": {
+        "java": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        },
+        "rust": {
+          "height": "784",
+          "title": "Flame Graph",
+          "inverted": "false",
+          "depth": "49",
+          "highlight": ""
+        }
+      },
+      "static_ui_matches_original_template": true,
+      "profile_maps_match": true,
+      "profile_total": 5389,
+      "profile_stacks": 174,
+      "frame_geometry_names_kinds_and_tier_counters_match": true,
+      "frame_count": {
+        "java": 727,
+        "rust": 727
+      }
+    }
+  ]
+}

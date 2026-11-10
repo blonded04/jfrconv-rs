@@ -1,0 +1,116 @@
+{
+  "version": "0.2.1",
+  "saved_repository": "/Users/v.matskevich/repos/jfrconv-rs",
+  "installed_binary": "/Users/v.matskevich/repos/jfrconv-rs/target/release/jfrconv",
+  "macos_arm64_binary_sha256": "654cce62946df6a1bfc25d8e8a7334c32506f37381fa64e8d936a9fe86f55497",
+  "version_output": "jfrconv-rs 0.2.1 (async-profiler 4.1 compatibility target; span extensions)",
+  "source_sha256": {
+    "Cargo.toml": "b2a792688cddd1197997ce8b744c76970b0afc4a703ee8fa170ca7ba6f3d41e1",
+    "Cargo.lock": "2427c8a450e4b64a857faeb86994e8d3030ab4e78393be8608d1ba7447c125fc",
+    "src/args.rs": "1d6891ae58c9caa97b036ea6862b91b18f6aad4eeb8e9396fc2ee0ea53659d13",
+    "src/convert.rs": "5b274c6bef6fc758e91daea869d1a213408c3f0e363220ce6e9a296ae1225e5f",
+    "src/export.rs": "44166b0ac9e5138cb989ce354f57f30ac05c7551d21cc6abaa4a7ab6fe99c8ff",
+    "src/heatmap.rs": "b077cad0590c086100e1d0d28ab1a5a1f61ff955a20cd25f193525a667c9e8f8",
+    "src/heatmap_sort.rs": "c3d5c527bf74da85061b78b2449a208a0c8cbbf93aaeda7e7e7b99c11437571e",
+    "src/input.rs": "61b58d78120afcda0a239769f8ccd4e672fd867b53cc6fb57d20f53d631b0334",
+    "src/jfr.rs": "6a8de986fce3492f3363d3afddff694361ae19107df18dbd5b56ade74a366af5",
+    "src/leak_sort.rs": "168b68ec12fb8d2143fdfdb0f716aac20fc0e4cc3f5027d9734e4c7a71fb24ef",
+    "src/main.rs": "831be9e9f9e9c99793952af0ff0a97d73e7d1cc1ccf5d9bd26c37c6c0d1edf5a",
+    "src/memory.rs": "a0e5570c0339a0c5fbaab4262e9f4af85f4c9633fdc5fff2778d2df96b19950a",
+    "src/model.rs": "6cf1026c55f171a2a4c700bf0e64d6bb41feb097b0432765f48429caec6d500b",
+    "src/proto.rs": "6971d051622f6fd15cf286829d31da201360f9cdd3fb2d09c7cbf498692291e7",
+    "assets/flame-diff.html": "4c34c556a1b586fa8b2446351011dca496ca32dfeff06a36fd8bc5e7d0325bdf",
+    "assets/flame.html": "4e7b51b631e857f0c8ae832410adfa108ec67b3f5eed32be09acd025505c7407",
+    "assets/heatmap.html": "12e3e1907300dad8ae5a956ddce22e0322a02a76ed3603332a606a1fc6cf564b",
+    "tests/RecordingWorkload.java": "3307fbf351aae5157320f2dd7edee994e059b511e5e7056a110c4f7da12f83a2",
+    "tests/cli_paths.rs": "fc39c14597c2d2ad52ecddd699935caaa089e474a642857b78f7bb552eb7bb3d",
+    "tests/cli_streams.rs": "0b49df72fa37c26d0549143c295d8f945afab8cccdddf8a5597ed0c54e402c92",
+    "tests/compatibility.rs": "01d501a9761082a2b8fe6683fc816224f3640c22e32c7206b4b923e442a759a8",
+    "tests/edge_cases.rs": "145b428f31774d2e422c4442f22b96643dfcbd2fa37efde64d3510a4218d1ddf",
+    "tests/fixtures/cross-span.jfr": "00e4e081561bb1bd733fe9c9fc1871c858dc5a2c679e57d78a2930f273c47d83",
+    "tests/fixtures/empty-stacks.jfr": "713854142487ce815583c3722fb72c48da69f9674e86ecc83826b26280ae80af",
+    "tests/fixtures/leak-order.jfr": "027fe5d7c893d212cb5eabee0e7d0199b1eb5aed1d0586e6046ce0018f530234",
+    "tests/fixtures/method-trace.jfr": "cc3bcd80b3e4adee7aed3483daa2896f73b223555efd51475a4926b48e27115d",
+    "tests/fixtures/mixed.jfr": "734617f892a58761c79fffdb0e379c1899b2ca46c18eeec5f94d74720586274f",
+    "tests/fixtures/wall-v41.html": "15d2ac157f3a0d8628a9c8761d06ed8c74eb1ebc64edb10bfd765b65c318f412",
+    "tests/memory_limits.rs": "97e42287f558a38594ced69db7681c7a73023e96dc0ce42482dce030e27f80d2"
+  },
+  "saved_repository_source_matches": true,
+  "macos_cargo_passed": 72,
+  "linux_cargo_passed": 73,
+  "macos_checks": [
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/format.log"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/tests.log"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--all-targets",
+        "--locked",
+        "--offline",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/clippy.log"
+    },
+    {
+      "name": "release",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "log": "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/ui-release-checks/release.log"
+    }
+  ],
+  "installed_binary_smoke": {
+    "exit_code": 0,
+    "sample_units": 6,
+    "command": [
+      "/Users/v.matskevich/repos/jfrconv-rs/target/release/jfrconv",
+      "--memory-limit",
+      "16M",
+      "--max-rss",
+      "32M",
+      "--memory-stats",
+      "--cpu",
+      "/Users/v.matskevich/repos/jfrconv-rs/tests/fixtures/mixed.jfr",
+      "/Users/v.matskevich/Documents/Codex/2026-11-10/si/work/saved-repo-ui021-smoke.collapsed"
+    ],
+    "live_bytes": 1089,
+    "peak_reserved_bytes": 149501,
+    "reported_rss_bytes": 3440640
+  },
+  "original_v41_templates_byte_identical": [
+    "assets/flame.html",
+    "assets/heatmap.html"
+  ],
+  "ui_parity_report": "UI-PARITY.md"
+}

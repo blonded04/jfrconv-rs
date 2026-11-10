@@ -1,0 +1,35 @@
+{
+  "revision": "5930966a92860f6e5d2d89ab6faab5815720bad9",
+  "suite": "v4.1",
+  "transport_bridge": true,
+  "assertion_files_unchanged": true,
+  "command": [
+    "java",
+    "-ea",
+    "-Djava.library.path=build/test/lib",
+    "-DthreadCount=1",
+    "-DretryCount=0",
+    "-DlogDir=/work/v41-rust/public-test-results/profiles",
+    "-cp",
+    "build/test.jar:build/jar/*:build/lib/*:test/deps/*:test/gen/*",
+    "one.profiler.test.Runner",
+    "NativememTests.ldpreload"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.9086908749886788,
+  "counts": {
+    "PASS": 1
+  },
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "NativememTests.ldpreload (args: once)",
+      "seconds": 0.832
+    }
+  ],
+  "platform": "Linux aarch64",
+  "java_version": "openjdk version \"21.0.11\" 2026-04-21 LTS\nOpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing)",
+  "rust_binary": "/work/linux-target/release/jfrconv",
+  "adapter": "Only Output.convertJfrToCollapsed, static JfrToFlame/JfrToHeatmap.convert and Main.main transport entry points are redirected. Published test assertions are byte-for-byte unchanged. /dev/null smoke output maps to a disposable file.",
+  "rust_binary_sha256": "d706f729e505f913f93671c9b977c31747471d19aaa08454baa1f6ac0eb88ee9"
+}
